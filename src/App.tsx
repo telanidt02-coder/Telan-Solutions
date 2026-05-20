@@ -269,7 +269,7 @@ const About = () => (
             <motion.img 
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
-              src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/699215308_122097445833319362_1769280596133804974_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_ohc=omoiXIqO1mcQ7kNvwGkdvkW&_nc_oc=AdpsGohzYmNSb7JMyVWIGu3wg25gCJa8WRCNfs2tLO32KstMjHP5NosNejd9N-0FZh0&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=MakRFxO-nd7JZzAApH855w&_nc_ss=7b2a8&oh=00_Af57AeBbabsHv7MZXxL3xHjSmXeihdmLmI0_MrLa5_-F7Q&oe=6A09C0EE"  
+              src="https://drive.google.com/uc?export=view&id=1BhGlathA5nHipk_CpgHttMhBcIPd07Q_"  
               alt="Telan Solutions Office Interior"
               className="w-full h-full object-cover rounded-3xl"
               loading="lazy"
