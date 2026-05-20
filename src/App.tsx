@@ -405,7 +405,7 @@ const WhyWorkWithUs = () => {
       name: "Alvin Mangulad",
       role: "Senior Network Administrator, Joined 2001",
       images: [
-        "/images/alvin-images.png",
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/alvin-images.png",
 
       ]
     },
