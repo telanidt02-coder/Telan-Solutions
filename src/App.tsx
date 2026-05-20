@@ -405,7 +405,7 @@ const WhyWorkWithUs = () => {
       name: "Alvin Mangulad",
       role: "Senior Network Administrator, Joined 2001",
       images: [
-        "https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/696242401_122097613845319362_8942477996191480243_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_ohc=DV_e9QDwGL4Q7kNvwEOUhzM&_nc_oc=AdrH_LIVKWaJjDj9pm_slQNpTRcAXxiIQjZjoDyJl9ub6YNFHDRUS8hC4ojNVQXgWQQ&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&_nc_gid=EhdfhtAtLcZHq7xzeYUxvg&_nc_ss=7b2a8&oh=00_Af7iYI7E3HfK3VpoLqeXNL_FtrDdXe5HGgRcZUC0rvcS2w&oe=6A0A03C3",
+        "images/alvin-images.png",
 
       ]
     },
