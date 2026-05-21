@@ -1481,7 +1481,7 @@ const AboutUsPage = () => (
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Telan-Solutions">
       <div className="min-h-screen">
         <Navbar />
         <Routes>
