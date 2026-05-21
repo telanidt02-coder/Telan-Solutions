@@ -68,7 +68,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
           <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg shadow-brand-gold/10">
             <img 
-              src="https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/699064496_122097453963319362_5791947338015895893_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f727a1&_nc_ohc=mMhdCfJou34Q7kNvwFJIgId&_nc_oc=AdqAIrbpmFgVtNlv80dtPs-i5-KKQXB7O7-uwdhOWpJjOPWxcmpZVjMy4Qrzx7qQadU&_nc_zt=23&_nc_ht=scontent.fmnl4-3.fna&_nc_gid=xrqGrz_71eeYRfOkG9LdqQ&_nc_ss=7b2a8&oh=00_Af4Wwol-BK1mzK0i6uK70e3ZB9YJ_qGRomKJqeh4OGV7VQ&oe=6A09B58F" 
+              src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/logo.png" 
               alt="Telan Solutions Logo" 
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -269,7 +269,7 @@ const About = () => (
             <motion.img 
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
-              src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/alvin-images.png"  
+              src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/aboutus-images.jpg"  
               alt="Telan Solutions Office Interior"
               className="w-full h-full object-cover rounded-3xl"
               loading="lazy"
@@ -414,7 +414,7 @@ const WhyWorkWithUs = () => {
       name: "Avelino Tabangcura",
       role: "Account Officer, Joined 2000",
       images: [
-        "https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/696438577_122097612279319362_431253041184665088_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=f727a1&_nc_ohc=KFx18_Ylx7QQ7kNvwEqkeEq&_nc_oc=AdqJ7Myzhk94USKwJ426LKzPHzSkIHRCfTjFk9jvMMi4bmQKmIUlODZgjpht2pr7K8g&_nc_zt=23&_nc_ht=scontent.fmnl4-3.fna&_nc_gid=wr_z4nf5vkkKa4mci4dI9g&_nc_ss=7b2a8&oh=00_Af4Aw13PvQ75rfWb68ctByGGB0NwoKCUohlrB1ov2-iwLw&oe=6A0A085E",
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/avelino-images.png",
         
       ]
     },
@@ -423,7 +423,7 @@ const WhyWorkWithUs = () => {
       name: "Violet Miranda",
       role: "Admin Officer, Joined 2010",
       images: [
-        "https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/696463180_122097633699319362_1618431292199415947_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=f727a1&_nc_ohc=zNZ2as74QukQ7kNvwHPChZk&_nc_oc=AdrZZahSJSkfJse808fhWk-OP0u_5Zi8kPBe2w7QrGys8Y8h_RQahwakCrRNg29kSOc&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&_nc_gid=jJcoIkInkkhw3pII73fjGQ&_nc_ss=7b2a8&oh=00_Af60ipvpgR1cqiJdENM5Bcx_UJPD_4poAxBFkCNndZnr8Q&oe=6A0A0C3C",
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/violet-images.jpg",
         
       ]
     }
@@ -940,7 +940,7 @@ const Footer = () => (
           <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
             <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg shadow-brand-gold/10 border border-white/10">
               <img 
-                src="https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/699064496_122097453963319362_5791947338015895893_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f727a1&_nc_ohc=mMhdCfJou34Q7kNvwFJIgId&_nc_oc=AdqAIrbpmFgVtNlv80dtPs-i5-KKQXB7O7-uwdhOWpJjOPWxcmpZVjMy4Qrzx7qQadU&_nc_zt=23&_nc_ht=scontent.fmnl4-3.fna&_nc_gid=xrqGrz_71eeYRfOkG9LdqQ&_nc_ss=7b2a8&oh=00_Af4Wwol-BK1mzK0i6uK70e3ZB9YJ_qGRomKJqeh4OGV7VQ&oe=6A09B58F" 
+                src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/logo.png" 
                 alt="Telan Solutions Logo" 
                 className="w-full h-full object-cover"
               />
@@ -1397,7 +1397,7 @@ const AboutUsPage = () => (
              <div className="sticky top-32">
                 <div className="aspect-[4/5] rounded-[48px] overflow-hidden shadow-2xl border-2 border-slate-50">
                    <img 
-                      src="https://scontent.fcrk2-3.fna.fbcdn.net/v/t39.30808-6/699840229_122098899693319362_3729970296029800977_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_ohc=J6TEhOyG2ZEQ7kNvwERgcCm&_nc_oc=Adpv3K20hJQfI-zujCSeXcaAHnMWYORZB3hLEpU4CwZvQyL7ByteT5Kgl_3n7KfpMTg&_nc_zt=23&_nc_ht=scontent.fcrk2-3.fna&_nc_gid=Lc8krWLE4Sk8WMGdCMnUzw&_nc_ss=7b2a8&oh=00_Af4-9jFeWrnf4grdmNXHtwqQzVSb_4ugicxVnMcOQlkaHQ&oe=6A0C53FE" 
+                      src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/heritage-image.png" 
                       className="w-full h-full object-cover" 
                       alt="Telan Solutions Office"
                    />
@@ -1429,16 +1429,16 @@ const AboutUsPage = () => (
         >
           {/* Seamless loop of images to create marquee effect */}
           {[
-            "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/697198315_122098247691319362_1027289252876028205_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_ohc=NzRQ-72uW_AQ7kNvwH3_p8p&_nc_oc=Adqh5p43pGei-UMN62IBOBUNBTMQwfnM_hyhbPoXqIjsOtMbXH8EBI2Mu1gQpJ0GPu0&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=1IWasIxOJJabcttyvEtDHw&_nc_ss=7b2a8&oh=00_Af7kndDi2WmQw581aEChX6PT6yvV_ZbvULeQBNx4pkExEw&oe=6A0B3A22",
-            "https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/695899421_122098247745319362_4079177298823768581_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_ohc=DS_pyIZ-280Q7kNvwELZCKe&_nc_oc=Adpjm-g4rMBLNnwpK-H9RhChK0sBBtczi65U4FlFvCleV9g6r-UPyI1abmWyub_izT4&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&_nc_gid=IvYvCa2xzB3IkpKBVp-eAw&_nc_ss=7b2a8&oh=00_Af4Rk-ioVYbzcISf19TTSW0bnaZccUA08CLgEh6tlMB8BQ&oe=6A0B3ECD",
-            "https://scontent.fcrk2-1.fna.fbcdn.net/v/t39.30808-6/699479475_122098247799319362_3797467409982122502_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_ohc=s-98_b3UsYoQ7kNvwG5STHu&_nc_oc=AdqLd-MWMv0IAG1-s1NECCqYFSDg5H2vqFB14jdf5W9TJGnmbgNcGf7oxiUmRyviYao&_nc_zt=23&_nc_ht=scontent.fcrk2-1.fna&_nc_gid=Pf9-GAupTy1b_x40mmfcSQ&_nc_ss=7b2a8&oh=00_Af66MUswUJiB-APxCS1H38SvU4KOO_uzlg05rREa73tGpA&oe=6A0C5202",
-            "https://scontent.fcrk4-1.fna.fbcdn.net/v/t39.30808-6/696501348_122098247841319362_8223519220432107905_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_ohc=5ByfZKXMv8wQ7kNvwFUEbi0&_nc_oc=AdqbMkPwCVoZdmxT5eUL8sP1wArTZrEHKsCWvirMqEOjS1dswJO_e9PpoXI6RbDxU-c&_nc_zt=23&_nc_ht=scontent.fcrk4-1.fna&_nc_gid=OB8fmDwxMfZDFkBkpyJo7Q&_nc_ss=7b2a8&oh=00_Af6jeLe_6XWsrwhgqT11iqzb4KUFkLuh3059VPe3oahTOg&oe=6A0C44E9",
-            "https://scontent.fcrk4-1.fna.fbcdn.net/v/t39.30808-6/699466680_122098247883319362_4239790180770804806_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_ohc=8qdXZ2nkxCcQ7kNvwGTmMC1&_nc_oc=AdrSa-rCD_TMpPR9df-HjrKc_NE2uH1vdk-bZIyQR4gvVfboCr-M-fJXGlNgJ4ojpGw&_nc_zt=23&_nc_ht=scontent.fcrk4-1.fna&_nc_gid=GUQP2olIY8EFzd00OTVI4Q&_nc_ss=7b2a8&oh=00_Af4ZOV077qEdwzmfNLKHzugmbXB2h_5dpn2lf2bCK3jI8g&oe=6A0C6EBF",
-            "https://scontent.fcrk2-4.fna.fbcdn.net/v/t39.30808-6/699778287_122098247955319362_2698315778781422259_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f727a1&_nc_ohc=M4Py_hxtOj4Q7kNvwHpFgL8&_nc_oc=AdqsU7Kr75QUQgdlB_0phTQHgOvSXJ8qOBqiRhNZNt3-9xHkdybQeRFbbhjqU1MZX9c&_nc_zt=23&_nc_ht=scontent.fcrk2-4.fna&_nc_gid=0h54DCYGv_jZNImQF7lUbg&_nc_ss=7b2a8&oh=00_Af5IcIP9_X9gFyt5Sy8_iesMFwWLEjmCgtJRqJ96ZaeRQQ&oe=6A0C48C6",
-            "https://scontent.fcrk2-2.fna.fbcdn.net/v/t39.30808-6/697107091_122098247961319362_5010369996572121390_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=f727a1&_nc_ohc=IxhMszsUX0kQ7kNvwHR51IA&_nc_oc=AdpzvYS_-tzjsIIZIbqCRXit5t66s9deXj5KeysSHWRZ3LLeNQExdjAG9P4LmUZc0t4&_nc_zt=23&_nc_ht=scontent.fcrk2-2.fna&_nc_gid=Oe4NwWJ-Rfm0hW6cMh6KZQ&_nc_ss=7b2a8&oh=00_Af6fg44oDCNJu_ahGs_IuX_Fx8gtFwpLE4VNnhCJGE3siQ&oe=6A0C4383",
-            "https://scontent.fcrk2-1.fna.fbcdn.net/v/t39.30808-6/696264083_122098248021319362_3540353645981223876_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_ohc=97m4vz9wPycQ7kNvwHPplwT&_nc_oc=AdolVjkbC1yPYyeHNhZk4YBDyCR-zH-vDe_ZudujgTUMTF_dR59W5Cz86wwsx_jFnDg&_nc_zt=23&_nc_ht=scontent.fcrk2-1.fna&_nc_gid=7vkcga6Mce-ypF5Xrvv5UA&_nc_ss=7b2a8&oh=00_Af7Au_tW96Mv4qe8fTw_plGX7SvxB2r9QsY8dCA7qWr5rg&oe=6A0C4412",
-            "https://scontent.fcrk4-1.fna.fbcdn.net/v/t39.30808-6/697317308_122098248105319362_7197400801289911826_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_ohc=dGNThvxXLTMQ7kNvwFs3Sn7&_nc_oc=AdoxTLbVsTQkQnqcu_qfHzDv8aHSvSrB6ZkPI-2FWsQ1QjwatF_89D8kEHkw43MgoNk&_nc_zt=23&_nc_ht=scontent.fcrk4-1.fna&_nc_gid=xb3c7pu28HqqgGI2U6w3ug&_nc_ss=7b2a8&oh=00_Af65yu54pSe7CWb7DIiyZjr5kYhcXAl7NUxXc2hrdZPZYQ&oe=6A0C7149",
-            "https://scontent.fcrk2-4.fna.fbcdn.net/v/t39.30808-6/698875775_122098248111319362_1341873177023839463_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_ohc=fcv6Mt6orbQQ7kNvwEO4yWY&_nc_oc=AdoWm13JSyhu8LHRADz0z_kpvoJneKKX5lsbkiCyc16EpOa5TWWJS92Q2aLnnBiAP5g&_nc_zt=23&_nc_ht=scontent.fcrk2-4.fna&_nc_gid=xfYglZuRhD49aWy3Lnn3Cw&_nc_ss=7b2a8&oh=00_Af6HPHVYNnM9trHQ-BQNqW-1pAbC-M-8LP3yAb7LPLqAkA&oe=6A0C4DDD"
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/BPI.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/Jaccs.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/Maybank.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/Orico.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/PBB.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/PSBANK.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/RCBC.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/SBC.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/PNB.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/east-west.png"
           ].map((url, i) => (
             <div key={`img-1-${i}`} className="w-40 h-24 md:w-56 md:h-32 rounded-xl overflow-hidden shadow-sm border border-slate-100 shrink-0 group">
               <img 
@@ -1451,16 +1451,16 @@ const AboutUsPage = () => (
           ))}
           {/* Repeat for seamless transition */}
           {[
-            "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/697198315_122098247691319362_1027289252876028205_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_ohc=NzRQ-72uW_AQ7kNvwH3_p8p&_nc_oc=Adqh5p43pGei-UMN62IBOBUNBTMQwfnM_hyhbPoXqIjsOtMbXH8EBI2Mu1gQpJ0GPu0&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=1IWasIxOJJabcttyvEtDHw&_nc_ss=7b2a8&oh=00_Af7kndDi2WmQw581aEChX6PT6yvV_ZbvULeQBNx4pkExEw&oe=6A0B3A22",
-            "https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/695899421_122098247745319362_4079177298823768581_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_ohc=DS_pyIZ-280Q7kNvwELZCKe&_nc_oc=Adpjm-g4rMBLNnwpK-H9RhChK0sBBtczi65U4FlFvCleV9g6r-UPyI1abmWyub_izT4&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&_nc_gid=IvYvCa2xzB3IkpKBVp-eAw&_nc_ss=7b2a8&oh=00_Af4Rk-ioVYbzcISf19TTSW0bnaZccUA08CLgEh6tlMB8BQ&oe=6A0B3ECD",
-            "https://scontent.fcrk2-1.fna.fbcdn.net/v/t39.30808-6/699479475_122098247799319362_3797467409982122502_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_ohc=s-98_b3UsYoQ7kNvwG5STHu&_nc_oc=AdqLd-MWMv0IAG1-s1NECCqYFSDg5H2vqFB14jdf5W9TJGnmbgNcGf7oxiUmRyviYao&_nc_zt=23&_nc_ht=scontent.fcrk2-1.fna&_nc_gid=Pf9-GAupTy1b_x40mmfcSQ&_nc_ss=7b2a8&oh=00_Af66MUswUJiB-APxCS1H38SvU4KOO_uzlg05rREa73tGpA&oe=6A0C5202",
-            "https://scontent.fcrk4-1.fna.fbcdn.net/v/t39.30808-6/696501348_122098247841319362_8223519220432107905_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_ohc=5ByfZKXMv8wQ7kNvwFUEbi0&_nc_oc=AdqbMkPwCVoZdmxT5eUL8sP1wArTZrEHKsCWvirMqEOjS1dswJO_e9PpoXI6RbDxU-c&_nc_zt=23&_nc_ht=scontent.fcrk4-1.fna&_nc_gid=OB8fmDwxMfZDFkBkpyJo7Q&_nc_ss=7b2a8&oh=00_Af6jeLe_6XWsrwhgqT11iqzb4KUFkLuh3059VPe3oahTOg&oe=6A0C44E9",
-            "https://scontent.fcrk4-1.fna.fbcdn.net/v/t39.30808-6/699466680_122098247883319362_4239790180770804806_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_ohc=8qdXZ2nkxCcQ7kNvwGTmMC1&_nc_oc=AdrSa-rCD_TMpPR9df-HjrKc_NE2uH1vdk-bZIyQR4gvVfboCr-M-fJXGlNgJ4ojpGw&_nc_zt=23&_nc_ht=scontent.fcrk4-1.fna&_nc_gid=GUQP2olIY8EFzd00OTVI4Q&_nc_ss=7b2a8&oh=00_Af4ZOV077qEdwzmfNLKHzugmbXB2h_5dpn2lf2bCK3jI8g&oe=6A0C6EBF",
-            "https://scontent.fcrk2-4.fna.fbcdn.net/v/t39.30808-6/699778287_122098247955319362_2698315778781422259_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f727a1&_nc_ohc=M4Py_hxtOj4Q7kNvwHpFgL8&_nc_oc=AdqsU7Kr75QUQgdlB_0phTQHgOvSXJ8qOBqiRhNZNt3-9xHkdybQeRFbbhjqU1MZX9c&_nc_zt=23&_nc_ht=scontent.fcrk2-4.fna&_nc_gid=0h54DCYGv_jZNImQF7lUbg&_nc_ss=7b2a8&oh=00_Af5IcIP9_X9gFyt5Sy8_iesMFwWLEjmCgtJRqJ96ZaeRQQ&oe=6A0C48C6",
-            "https://scontent.fcrk2-2.fna.fbcdn.net/v/t39.30808-6/697107091_122098247961319362_5010369996572121390_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=f727a1&_nc_ohc=IxhMszsUX0kQ7kNvwHR51IA&_nc_oc=AdpzvYS_-tzjsIIZIbqCRXit5t66s9deXj5KeysSHWRZ3LLeNQExdjAG9P4LmUZc0t4&_nc_zt=23&_nc_ht=scontent.fcrk2-2.fna&_nc_gid=Oe4NwWJ-Rfm0hW6cMh6KZQ&_nc_ss=7b2a8&oh=00_Af6fg44oDCNJu_ahGs_IuX_Fx8gtFwpLE4VNnhCJGE3siQ&oe=6A0C4383",
-            "https://scontent.fcrk2-1.fna.fbcdn.net/v/t39.30808-6/696264083_122098248021319362_3540353645981223876_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_ohc=97m4vz9wPycQ7kNvwHPplwT&_nc_oc=AdolVjkbC1yPYyeHNhZk4YBDyCR-zH-vDe_ZudujgTUMTF_dR59W5Cz86wwsx_jFnDg&_nc_zt=23&_nc_ht=scontent.fcrk2-1.fna&_nc_gid=7vkcga6Mce-ypF5Xrvv5UA&_nc_ss=7b2a8&oh=00_Af7Au_tW96Mv4qe8fTw_plGX7SvxB2r9QsY8dCA7qWr5rg&oe=6A0C4412",
-            "https://scontent.fcrk4-1.fna.fbcdn.net/v/t39.30808-6/697317308_122098248105319362_7197400801289911826_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_ohc=dGNThvxXLTMQ7kNvwFs3Sn7&_nc_oc=AdoxTLbVsTQkQnqcu_qfHzDv8aHSvSrB6ZkPI-2FWsQ1QjwatF_89D8kEHkw43MgoNk&_nc_zt=23&_nc_ht=scontent.fcrk4-1.fna&_nc_gid=xb3c7pu28HqqgGI2U6w3ug&_nc_ss=7b2a8&oh=00_Af65yu54pSe7CWb7DIiyZjr5kYhcXAl7NUxXc2hrdZPZYQ&oe=6A0C7149",
-            "https://scontent.fcrk2-4.fna.fbcdn.net/v/t39.30808-6/698875775_122098248111319362_1341873177023839463_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_ohc=fcv6Mt6orbQQ7kNvwEO4yWY&_nc_oc=AdoWm13JSyhu8LHRADz0z_kpvoJneKKX5lsbkiCyc16EpOa5TWWJS92Q2aLnnBiAP5g&_nc_zt=23&_nc_ht=scontent.fcrk2-4.fna&_nc_gid=xfYglZuRhD49aWy3Lnn3Cw&_nc_ss=7b2a8&oh=00_Af6HPHVYNnM9trHQ-BQNqW-1pAbC-M-8LP3yAb7LPLqAkA&oe=6A0C4DDD"
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/BPI.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/Jaccs.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/Maybank.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/Orico.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/PBB.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/PSBANK.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/RCBC.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/SBC.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/PNB.png",
+            "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/east-west.png"
           ].map((url, i) => (
             <div key={`img-2-${i}`} className="w-40 h-24 md:w-56 md:h-32 rounded-xl overflow-hidden shadow-sm border border-slate-100 shrink-0 group">
               <img 
