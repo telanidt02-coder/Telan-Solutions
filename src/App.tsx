@@ -405,7 +405,7 @@ const WhyWorkWithUs = () => {
       name: "Edwin Devilles",
       role: "Team Manager, Joined 2016",
       images: [
-        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/edwin_devilles.png,
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/edwin_devilles.png",
 
       ]
     },
