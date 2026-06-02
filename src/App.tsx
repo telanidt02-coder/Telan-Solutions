@@ -430,9 +430,9 @@ const WhyWorkWithUs = () => {
         {
       quote: "I am grateful to Telan Solutions for believing in my potential and giving me opportunities to lead, learn, and grow. The company helped me become more efficient, resilient, and confident, while also shaping me into a better individual beyond the workplace.",
       name: "Edwin Devilles",
-      role: "Team Manager, Joined 2000",
+      role: "Team Manager, Joined 2016",
       images: [
-        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/avelino-images.png",
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/edwin_devilles.png",
         
       ]
     },
