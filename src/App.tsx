@@ -385,7 +385,7 @@ const MissionVision = () => (
           <blockquote className="relative">
             <Quote className="absolute -top-6 -left-6 w-12 h-12 text-brand-gold/10" />
             <p className="text-2xl md:text-3xl font-bold text-white leading-tight italic tracking-tight">
-              Most admired receivables management solutions provider in the country.
+              To be the country's most admired receivables management solutions provider, driven by excellence, innovation, compliance, and client success.
             </p>
           </blockquote>
           <div className="mt-12 h-1.5 w-32 bg-brand-gold rounded-full shadow-[0_0_15px_rgba(212,175,55,0.5)]" />
@@ -418,7 +418,7 @@ const WhyWorkWithUs = () => {
         
       ]
     },
-    {
+        {
       quote: "Working at Telan Solutions as an Admin Officer has been a truly rewarding experience. I’m grateful to be part of a company where management genuinely cares about its employees, not only professionally but also personally.",
       name: "Violet Miranda",
       role: "Admin Officer, Joined 2010",
@@ -426,7 +426,26 @@ const WhyWorkWithUs = () => {
         "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/violet-images.jpg",
         
       ]
+    },
+        {
+      quote: "I am grateful to Telan Solutions for believing in my potential and giving me opportunities to lead, learn, and grow. The company helped me become more efficient, resilient, and confident, while also shaping me into a better individual beyond the workplace.",
+      name: "Edwin Devilles",
+      role: "Team Manager, Joined 2000",
+      images: [
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/avelino-images.png",
+        
+      ]
+    },
+    {
+      quote: "Working at Telan Solutions as an Admin Officer has been a truly rewarding experience. I’m grateful to be part of a company where management genuinely cares about its employees, not only professionally but also personally.",
+      name: "Michael Yamson",
+      role: "Team Manager, Joined 2010",
+      images: [
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/violet-images.jpg",
+        
+      ]
     }
+    
   ];
 
   useEffect(() => {
@@ -659,10 +678,10 @@ const ExperienceLifeSection = () => {
         {/* Brand Pillars Overlay */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 max-w-5xl mx-auto pt-10 border-t border-white/5">
           {[
-            { label: "Teamwork", icon: <Users className="w-5 h-5" /> },
-            { label: "Growth", icon: <TrendingUp className="w-5 h-5" /> },
-            { label: "Stability", icon: <Award className="w-5 h-5" /> },
-            { label: "Innovation", icon: <Sparkles className="w-5 h-5" /> }
+            { label: "Excellence", icon: <Users className="w-5 h-5" /> },
+            { label: "Integrity", icon: <TrendingUp className="w-5 h-5" /> },
+            { label: "Teamwork", icon: <Award className="w-5 h-5" /> },
+            { label: "Accountability", icon: <Sparkles className="w-5 h-5" /> }
           ].map((pillar, i) => (
             <motion.div 
               key={i}
