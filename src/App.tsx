@@ -401,15 +401,24 @@ const WhyWorkWithUs = () => {
 
   const testimonials = [
     {
-      quote: "The supportive environment here at Telan helped me grow from an IT Support to a Senior Network Administrator. It's more than a job, it's a family.",
-      name: "Alvin Mangulad",
-      role: "Senior Network Administrator, Joined 2001",
+      quote: "I am grateful to Telan Solutions for believing in my potential and giving me opportunities to lead, learn, and grow. The company helped me become more efficient, resilient, and confident, while also shaping me into a better individual beyond the workplace.",
+      name: "Edwin Devilles",
+      role: "Team Manager, Joined 2016",
       images: [
-        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/alvin-images.png",
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/edwin_devilles.png,
 
       ]
     },
     {
+     quote: "Working at Telan Solutions as an Admin Officer has been a truly rewarding experience. I’m grateful to be part of a company where management genuinely cares about its employees, not only professionally but also personally.",
+      name: "Michael Yamson",
+      role: "Team Manager, Joined 2010",
+      images: [
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/violet-images.jpg",
+        
+      ]
+    },
+        {
       quote: "Telan Solutions gave me the tools to succeed. The Account Officer role is challenging but the rewards and the team support make it worth it.",
       name: "Avelino Tabangcura",
       role: "Account Officer, Joined 2000",
@@ -419,7 +428,7 @@ const WhyWorkWithUs = () => {
       ]
     },
         {
-      quote: "Working at Telan Solutions as an Admin Officer has been a truly rewarding experience. I’m grateful to be part of a company where management genuinely cares about its employees, not only professionally but also personally.",
+       quote: "Working at Telan Solutions as an Admin Officer has been a truly rewarding experience. I’m grateful to be part of a company where management genuinely cares about its employees, not only professionally but also personally.",
       name: "Violet Miranda",
       role: "Admin Officer, Joined 2010",
       images: [
@@ -427,21 +436,12 @@ const WhyWorkWithUs = () => {
         
       ]
     },
-        {
-      quote: "I am grateful to Telan Solutions for believing in my potential and giving me opportunities to lead, learn, and grow. The company helped me become more efficient, resilient, and confident, while also shaping me into a better individual beyond the workplace.",
-      name: "Edwin Devilles",
-      role: "Team Manager, Joined 2016",
-      images: [
-        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/edwin_devilles.png",
-        
-      ]
-    },
     {
-      quote: "Working at Telan Solutions as an Admin Officer has been a truly rewarding experience. I’m grateful to be part of a company where management genuinely cares about its employees, not only professionally but also personally.",
-      name: "Michael Yamson",
-      role: "Team Manager, Joined 2010",
+      quote: "The supportive environment here at Telan helped me grow from an IT Support to a Senior Network Administrator. It's more than a job, it's a family.",
+      name: "Alvin Mangulad",
+      role: "Senior Network Administrator, Joined 2001",
       images: [
-        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/violet-images.jpg",
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/alvin-images.png",
         
       ]
     }
