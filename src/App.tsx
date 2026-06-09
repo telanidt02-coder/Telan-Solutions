@@ -410,7 +410,7 @@ const WhyWorkWithUs = () => {
       ]
     },
     {
-     quote: "Thank you, Telan Company. Because of your trust in me, I have grown so much and now truly believe I can reach my dreams. You gave me the chance to develop and reach my fullest potential. Telan has also been a great inspiration, reminding me that I am always capable of achieving more."",
+     quote: "Thank you, Telan Company. Because of your trust in me, I have grown so much and now truly believe I can reach my dreams. You gave me the chance to develop and reach my fullest potential. Telan has also been a great inspiration, reminding me that I am always capable of achieving more.",
       name: "Michael Yamson",
       role: "Team Manager, Joined 2009",
       images: [
