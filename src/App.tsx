@@ -410,11 +410,11 @@ const WhyWorkWithUs = () => {
       ]
     },
     {
-     quote: "Working at Telan Solutions as an Admin Officer has been a truly rewarding experience. I’m grateful to be part of a company where management genuinely cares about its employees, not only professionally but also personally.",
+     quote: "Thank you, Telan Company. Because of your trust in me, I have grown so much and now truly believe I can reach my dreams. You gave me the chance to develop and reach my fullest potential. Telan has also been a great inspiration, reminding me that I am always capable of achieving more."",
       name: "Michael Yamson",
-      role: "Team Manager, Joined 2010",
+      role: "Team Manager, Joined 2009",
       images: [
-        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/violet-images.jpg",
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/yamson.png",
         
       ]
     },
