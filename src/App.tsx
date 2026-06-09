@@ -610,6 +610,48 @@ const WhyWorkWithUs = () => {
 };
 
 const ExperienceLifeSection = () => {
+  const slides = [
+    {
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200&h=675",
+      title: "Collaborative Spirit",
+      description: "Our teams work side-by-side on high-impact projects, fostering an active environment of knowledge-sharing and mutual support.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200&h=675",
+      title: "Team Building & Celebrations",
+      description: "We work hard and celebrate harder. Connecting beyond work builds the trust that powers our daily achievements.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200&h=675",
+      title: "Modern Offices",
+      description: "Equipped with state-of-the-art workstations, high-speed fiber lines, and modern recreation spaces designed for wellness.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200&h=675",
+      title: "A Great Place to Learn & Grow",
+      description: "Guaranteed support structures, professional training courses, and clear leadership career paths for every team member.",
+    }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    if (!isPlaying) return;
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex, isPlaying]);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+  };
+
   return (
     <section id="culture" className="section-padding bg-slate-950 text-white overflow-hidden relative min-h-[800px] flex items-center">
       {/* Background Ambience */}
@@ -652,20 +694,103 @@ const ExperienceLifeSection = () => {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="relative max-w-6xl mx-auto group"
+          className="relative max-w-5xl mx-auto group"
+          onMouseEnter={() => setIsPlaying(false)}
+          onMouseLeave={() => setIsPlaying(true)}
         >
-          {/* Main Video Wrapper */}
+          {/* Main Photo Slider Wrapper */}
           <div className="relative aspect-video rounded-[32px] overflow-hidden bg-slate-900 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] border border-white/10 group-hover:shadow-[0_40px_120px_-10px_rgba(212,175,55,0.15)] transition-all duration-700">
-            <iframe 
-              src="https://drive.google.com/file/d/13conjVcDYpQTTU4WpzAnMDyZN7HLN1be/preview"
-              className="w-full h-full border-none grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              title="Life at Telan Video"
-            />
-            {/* Cinematic Overlay */}
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-slate-950/60 via-transparent to-slate-950/20" />
             
+            {/* Slides container */}
+            <div className="absolute inset-0 w-full h-full">
+              <AnimatePresence initial={false} mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.7, ease: "easeInOut" }}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  <img 
+                    src={slides[currentIndex].image}
+                    alt={slides[currentIndex].title}
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                  {/* Dark Vignette Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-slate-950/50 pointer-events-none" />
+                  
+                  {/* Dynamic Slide Content */}
+                  <div className="absolute bottom-6 left-6 right-6 md:bottom-12 md:left-12 md:right-12 z-20 max-w-3xl">
+                    <motion.span 
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 }}
+                      className="text-brand-gold font-bold uppercase text-[10px] sm:text-xs tracking-wider mb-2 block"
+                    >
+                      Life at Telan &bull; {currentIndex + 1} of {slides.length}
+                    </motion.span>
+                    <motion.h3 
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                      className="text-xl sm:text-3xl font-bold mb-2 text-white leading-tight"
+                    >
+                      {slides[currentIndex].title}
+                    </motion.h3>
+                    <motion.p 
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 }}
+                      className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl"
+                    >
+                      {slides[currentIndex].description}
+                    </motion.p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Custom Control Buttons */}
+            <button 
+              onClick={handlePrev}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-slate-950/60 hover:bg-brand-gold hover:text-slate-950 border border-white/10 hover:border-brand-gold text-white backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-300"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button 
+              onClick={handleNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-slate-950/60 hover:bg-brand-gold hover:text-slate-950 border border-white/10 hover:border-brand-gold text-white backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-300"
+              aria-label="Next image"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+
+            {/* Navigation Dots */}
+            <div className="absolute top-4 right-4 z-30 flex items-center space-x-1 bg-slate-950/45 backdrop-blur-md p-1.5 rounded-full border border-white/10">
+              {slides.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentIndex(idx)}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    idx === currentIndex ? 'w-5 bg-brand-gold' : 'w-1.5 bg-white/40 hover:bg-white'
+                  }`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Autoplay Play/Pause indicator */}
+            <button
+              onClick={() => setIsPlaying(!isPlaying)}
+              className="absolute bottom-4 right-4 z-30 p-2 rounded-full bg-slate-950/50 hover:bg-brand-gold hover:text-slate-950 border border-white/10 text-white backdrop-blur-sm opacity-60 hover:opacity-100 transition-all duration-300 hidden sm:block"
+              title={isPlaying ? "Pause autoplay" : "Start autoplay"}
+            >
+              {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+            </button>
+
             {/* Edge Glare */}
             <div className="absolute inset-0 pointer-events-none border border-white/5 rounded-[32px]" />
           </div>
@@ -678,10 +803,10 @@ const ExperienceLifeSection = () => {
         {/* Brand Pillars Overlay */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 max-w-5xl mx-auto pt-10 border-t border-white/5">
           {[
-            { label: "Excellence", icon: <Sparkles className="w-5 h-5" /> },
-            { label: "Integrity", icon: <TrendingUp className="w-5 h-5" /> },
             { label: "Teamwork", icon: <Users className="w-5 h-5" /> },
-            { label: "Accountability", icon: <Award className="w-5 h-5" /> }
+            { label: "Growth", icon: <TrendingUp className="w-5 h-5" /> },
+            { label: "Stability", icon: <Award className="w-5 h-5" /> },
+            { label: "Innovation", icon: <Sparkles className="w-5 h-5" /> }
           ].map((pillar, i) => (
             <motion.div 
               key={i}
