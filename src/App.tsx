@@ -612,24 +612,24 @@ const WhyWorkWithUs = () => {
 const ExperienceLifeSection = () => {
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200&h=675",
-      title: "Collaborative Spirit",
-      description: "Our teams work side-by-side on high-impact projects, fostering an active environment of knowledge-sharing and mutual support.",
+      image: "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/xparty/Cparty_intro.JPG",
+      title: "Christmas Party 2026",
+      description: "Telan Glamorous Christmas, Rock the season. Shine the night.",
     },
     {
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200&h=675",
-      title: "Team Building & Celebrations",
-      description: "We work hard and celebrate harder. Connecting beyond work builds the trust that powers our daily achievements.",
+      image: "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/halloween/hallooween_intro.jpg",
+      title: "Halloween Party",
+      description: ".",
     },
     {
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200&h=675",
-      title: "Modern Offices",
-      description: "Equipped with state-of-the-art workstations, high-speed fiber lines, and modern recreation spaces designed for wellness.",
+      image: "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/Sportfest_intro.jpg",
+      title: "Sportfest",
+      description: "Telan yearly sports festival.",
     },
     {
       image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200&h=675",
-      title: "A Great Place to Learn & Grow",
-      description: "Guaranteed support structures, professional training courses, and clear leadership career paths for every team member.",
+      title: "Training",
+      description: ".",
     }
   ];
 
