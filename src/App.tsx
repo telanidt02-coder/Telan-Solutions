@@ -729,7 +729,7 @@ const ExperienceLifeSection = () => {
                       transition={{ delay: 0.1 }}
                       className="text-brand-gold font-bold uppercase text-[10px] sm:text-xs tracking-wider mb-2 block"
                     >
-                      Life at Telan &bull; {currentIndex + 1} of {slides.length}
+                     
                     </motion.span>
                     <motion.h3 
                       initial={{ opacity: 0, y: 15 }}
