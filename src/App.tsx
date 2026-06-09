@@ -803,10 +803,10 @@ const ExperienceLifeSection = () => {
         {/* Brand Pillars Overlay */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 max-w-5xl mx-auto pt-10 border-t border-white/5">
           {[
+            { label: "Excellence", icon: <Sparkles className="w-5 h-5" /> },
+            { label: "Integrity", icon: <TrendingUp className="w-5 h-5" /> },
             { label: "Teamwork", icon: <Users className="w-5 h-5" /> },
-            { label: "Growth", icon: <TrendingUp className="w-5 h-5" /> },
-            { label: "Stability", icon: <Award className="w-5 h-5" /> },
-            { label: "Innovation", icon: <Sparkles className="w-5 h-5" /> }
+            { label: "Accountability", icon: <Award className="w-5 h-5" /> }
           ].map((pillar, i) => (
             <motion.div 
               key={i}
