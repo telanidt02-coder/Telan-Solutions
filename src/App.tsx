@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ChevronLeft, ChevronRight, MapPin, Phone, Mail, Globe, Award, Users, BookOpen, TrendingUp, CheckCircle2, Quote, Sparkles, Rocket, Heart, Play, Pause, Volume2, Maximize, ExternalLink, Calendar, Building2, Target, Server, ShieldCheck, Cpu, Wifi, Database, Network, Lock, MessageCircle, PhoneCall, BarChart3, LayoutDashboard, Wallet, UserCog, Search, CheckSquare, Navigation2, Smile, Zap, MessageSquareText } from 'lucide-react';
 import { useState, useEffect, useRef, ChangeEvent, FormEvent } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import CulturePage from './components/CulturePage';
 
 // --- Shared Components ---
 
@@ -59,7 +60,7 @@ const Navbar = () => {
     { name: 'Home', href: '/', isPage: true },
     { name: 'About Us', href: '/about', isPage: true },
     { name: 'Technology', href: '/technology', isPage: true },
-    { name: 'Culture', href: isHomePage ? '#culture' : '/#culture', isPage: false },
+    { name: 'Culture', href: '/culture', isPage: true },
   ];
 
   return (
@@ -743,10 +744,23 @@ const ExperienceLifeSection = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3 }}
-                      className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl"
+                      className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl mb-5"
                     >
                       {slides[currentIndex].description}
                     </motion.p>
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.4 }}
+                    >
+                      <Link 
+                        to="/culture"
+                        className="inline-flex items-center space-x-1.5 bg-brand-gold hover:bg-white text-slate-950 hover:text-brand-blue font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm hover:scale-105 active:scale-95 transition-all duration-350 shadow-lg shadow-brand-gold/15"
+                      >
+                        <span>See More Photos</span>
+                        <ChevronRight className="w-4 h-4" />
+                      </Link>
+                    </motion.div>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -1108,7 +1122,7 @@ const Footer = () => (
           <ul className="space-y-4">
             <li><Link to="/" className="hover:text-brand-gold">Home</Link></li>
             <li><Link to="/about" className="hover:text-brand-gold">About</Link></li>
-            <li><a href="/#culture" className="hover:text-brand-gold">Our Culture</a></li>
+            <li><Link to="/culture" className="hover:text-brand-gold">Our Culture</Link></li>
             <li><Link to="/technology" className="hover:text-brand-gold">Technology</Link></li>
             <li><Link to="/jobs" className="hover:text-brand-gold">Open Jobs</Link></li>
           </ul>
@@ -1633,6 +1647,7 @@ export default function App() {
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/jobs" element={<JobsPage />} />
           <Route path="/technology" element={<TechnologyPage />} />
+          <Route path="/culture" element={<CulturePage />} />
         </Routes>
         <Footer />
       </div>
