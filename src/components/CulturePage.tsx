@@ -9,6 +9,7 @@ import {
 interface CultureItem {
   id: number;
   image: string;
+  images: string[];
   title: string;
   description: string;
   category: 'Workspace' | 'Team Life' | 'Growth' | 'Celebrations';
@@ -18,6 +19,12 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 1,
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1531535934202-f022ee715f15?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Collaborative Spirit",
     description: "Our teams work side-by-side on high-impact BPO campaigns, fostering an active environment of daily support and mentorship.",
     category: "Team Life"
@@ -25,6 +32,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Year-End Celebrations",
     description: "Connecting beyond client lines builds the trust that forms the bedrock of our company success and employee longevity.",
     category: "Celebrations"
@@ -32,6 +44,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "State-of-the-Art Workspace",
     description: "Equipped with dual-monitor layouts, professional-grade noise canceling headsets, and high-speed fiber channels in Ortigas Center, Pasig.",
     category: "Workspace"
@@ -39,6 +56,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 4,
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Professional Training Courses",
     description: "Rigorous onboarding and leadership bootcamps designed to sharpen analytical collection, negotiation strategies, and leadership skills.",
     category: "Growth"
@@ -46,6 +68,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 5,
     image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Interactive Client Syncups",
     description: "Transparent feedback channels directly with our major banking and telecom affiliates, aligning goals and resolving pain points.",
     category: "Growth"
@@ -53,6 +80,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 6,
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Daily Energetic Huddles",
     description: "Starting shifts with metrics reviews, positive energy, motivational challenges, and localized gamification to boost morale.",
     category: "Team Life"
@@ -60,6 +92,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 7,
     image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Spacious Wellness Lounge",
     description: "Delivering deep consideration for employee well-being with games, relaxation chairs, and complementary refreshments to un-wind.",
     category: "Workspace"
@@ -67,6 +104,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 8,
     image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Team-Bonding Outings",
     description: "Annual excursions, team dinners, and recreational weekend hikes to recharge of our hard-working receivables teams.",
     category: "Celebrations"
@@ -74,6 +116,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 9,
     image: "https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1455849318743-b2233052fcff?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Telan Leadership Forum",
     description: "Our executives and team leaders come together monthly to exchange development blueprints and identify rising stars.",
     category: "Growth"
@@ -81,6 +128,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 10,
     image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Community Outreach Drives",
     description: "Bringing our core values of integrity and empathy into local communities through quarterly charitable programs and disaster reliefs.",
     category: "Team Life"
@@ -88,6 +140,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 11,
     image: "https://images.unsplash.com/photo-1531535934202-f022ee715f15?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1531535934202-f022ee715f15?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Townhall Discussions",
     description: "Celebrating outstanding collectors of the month with bonuses, plaque certifications, and full transparent company updates.",
     category: "Celebrations"
@@ -95,6 +152,11 @@ const GALLERY_DATA: CultureItem[] = [
   {
     id: 12,
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1521791136368-1a4682701534?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
     title: "Our Customer Care Philosophy",
     description: "Bridging business solutions with genuine human respect, elevating standards for the collection vertical in the Philippines.",
     category: "Workspace"
@@ -103,7 +165,8 @@ const GALLERY_DATA: CultureItem[] = [
 
 export default function CulturePage() {
   const [selectedCategory, setSelectedCategory] = useState<'All' | 'Workspace' | 'Team Life' | 'Growth' | 'Celebrations'>('All');
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [activeAlbum, setActiveAlbum] = useState<CultureItem | null>(null);
+  const [activePhotoIndex, setActivePhotoIndex] = useState<number>(0);
   const [isPlayingSlideshow, setIsPlayingSlideshow] = useState(false);
 
   // Filtered items based on categories
@@ -114,36 +177,35 @@ export default function CulturePage() {
   // Key handlers for Lightbox navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (lightboxIndex === null) return;
-      if (e.key === 'Escape') setLightboxIndex(null);
+      if (!activeAlbum) return;
+      if (e.key === 'Escape') {
+        setActiveAlbum(null);
+        setActivePhotoIndex(0);
+      }
       if (e.key === 'ArrowRight') handleLightboxNext();
       if (e.key === 'ArrowLeft') handleLightboxPrev();
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxIndex]);
+  }, [activeAlbum, activePhotoIndex]);
 
   // Lightbox slideshow interval
   useEffect(() => {
-    if (!isPlayingSlideshow || lightboxIndex === null) return;
+    if (!isPlayingSlideshow || !activeAlbum) return;
     const interval = setInterval(() => {
       handleLightboxNext();
     }, 4000);
     return () => clearInterval(interval);
-  }, [isPlayingSlideshow, lightboxIndex]);
+  }, [isPlayingSlideshow, activeAlbum, activePhotoIndex]);
 
   const handleLightboxNext = () => {
-    setLightboxIndex((prev) => {
-      if (prev === null) return null;
-      return (prev + 1) % filteredItems.length;
-    });
+    if (!activeAlbum) return;
+    setActivePhotoIndex((prev) => (prev + 1) % activeAlbum.images.length);
   };
 
   const handleLightboxPrev = () => {
-    setLightboxIndex((prev) => {
-      if (prev === null) return null;
-      return (prev - 1 + filteredItems.length) % filteredItems.length;
-    });
+    if (!activeAlbum) return;
+    setActivePhotoIndex((prev) => (prev - 1 + activeAlbum.images.length) % activeAlbum.images.length);
   };
 
   return (
@@ -200,7 +262,8 @@ export default function CulturePage() {
                 key={category}
                 onClick={() => {
                   setSelectedCategory(category);
-                  setLightboxIndex(null); // Reset lightbox on filter change because index might mismatch
+                  setActiveAlbum(null); // Reset lightbox on filter change
+                  setActivePhotoIndex(0);
                 }}
                 className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
                   selectedCategory === category
@@ -220,7 +283,7 @@ export default function CulturePage() {
             className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
           >
             <AnimatePresence mode="popLayout">
-              {filteredItems.map((item, index) => (
+              {filteredItems.map((item) => (
                 <motion.div
                   layout
                   key={item.id}
@@ -229,7 +292,10 @@ export default function CulturePage() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4 }}
                   className="bg-white rounded-[24px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group cursor-pointer flex flex-col justify-between"
-                  onClick={() => setLightboxIndex(index)}
+                  onClick={() => {
+                    setActiveAlbum(item);
+                    setActivePhotoIndex(0);
+                  }}
                   id={`gallery-item-${item.id}`}
                 >
                   <div className="relative aspect-[4/3] rounded-t-[24px] overflow-hidden">
@@ -246,6 +312,11 @@ export default function CulturePage() {
                     <span className="absolute top-4 left-4 bg-brand-blue/90 text-white text-[9px] uppercase tracking-widest font-bold px-3 py-1 rounded-full border border-white/10 shadow-sm">
                       {item.category}
                     </span>
+
+                    {/* Badge count of photos */}
+                    <span className="absolute bottom-4 right-4 bg-slate-950/70 text-brand-gold text-[10px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-white/10">
+                      {item.images.length} Photos
+                    </span>
                   </div>
 
                   <div className="p-6 flex-grow flex flex-col justify-between">
@@ -259,7 +330,7 @@ export default function CulturePage() {
                     </div>
 
                     <div className="border-t border-slate-50 mt-4 pt-3 flex items-center justify-between text-[10px] font-bold text-brand-gold uppercase tracking-widest">
-                      <span>View Slide Preview</span>
+                      <span>View All Photos</span>
                       <ChevronRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                     </div>
                   </div>
@@ -311,7 +382,7 @@ export default function CulturePage() {
 
       {/* IMMERSIVE LIGHTBOX OVERLAY */}
       <AnimatePresence>
-        {lightboxIndex !== null && (
+        {activeAlbum !== null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -323,11 +394,16 @@ export default function CulturePage() {
             <div className="flex items-center justify-between z-10 w-full text-white">
               <div className="flex items-center space-x-3">
                 <span className="px-3 py-1 bg-brand-gold/20 text-brand-gold rounded-full text-[10px] uppercase tracking-wider font-bold border border-brand-gold/15">
-                  {filteredItems[lightboxIndex].category}
+                  {activeAlbum.category}
                 </span>
                 <span className="text-xs text-slate-400 hidden sm:inline">
-                  Slide {lightboxIndex + 1} of {filteredItems.length}
+                  Photo {activePhotoIndex + 1} of {activeAlbum.images.length}
                 </span>
+              </div>
+
+              {/* Album Title */}
+              <div className="text-center font-bold text-slate-100 hidden md:block">
+                {activeAlbum.title}
               </div>
 
               {/* Close, Play controls */}
@@ -340,7 +416,11 @@ export default function CulturePage() {
                   {isPlayingSlideshow ? <Pause className="w-5 h-5 text-brand-gold" /> : <Play className="w-5 h-5" />}
                 </button>
                 <button
-                  onClick={() => setLightboxIndex(null)}
+                  onClick={() => {
+                    setActiveAlbum(null);
+                    setActivePhotoIndex(0);
+                    setIsPlayingSlideshow(false);
+                  }}
                   className="p-2 hover:bg-white/10 rounded-full transition-colors font-bold text-white hover:text-brand-gold"
                   id="close-lightbox-btn"
                 >
@@ -361,21 +441,23 @@ export default function CulturePage() {
               </button>
 
               {/* HD Image Canvas */}
-              <motion.div 
-                key={lightboxIndex}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                className="max-w-4xl max-h-[60vh] md:max-h-[70vh] aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative"
-              >
-                <img 
-                  src={filteredItems[lightboxIndex].image} 
-                  alt={filteredItems[lightboxIndex].title}
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </motion.div>
+              <div className="max-w-4xl max-h-[50vh] md:max-h-[60vh] aspect-video w-full flex items-center justify-center relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                <motion.div 
+                  key={`${activeAlbum.id}-${activePhotoIndex}`}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.3 }}
+                  className="w-full h-full"
+                >
+                  <img 
+                    src={activeAlbum.images[activePhotoIndex]} 
+                    alt={activeAlbum.title}
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </motion.div>
+              </div>
 
               {/* Next Trigger */}
               <button
@@ -387,25 +469,37 @@ export default function CulturePage() {
               </button>
             </div>
 
+            {/* Thumbnail Navigation Bar – "see all picture included" */}
+            <div className="w-full max-w-2xl mx-auto z-10 my-2">
+              <div className="flex justify-center items-center space-x-2 overflow-x-auto py-2 scrollbar-none">
+                {activeAlbum.images.map((imgUrl, thumbIdx) => (
+                  <button
+                    key={thumbIdx}
+                    onClick={() => setActivePhotoIndex(thumbIdx)}
+                    className={`relative w-16 h-10 md:w-20 md:h-12 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${
+                      thumbIdx === activePhotoIndex
+                        ? 'border-brand-gold scale-105 shadow-md shadow-brand-gold/25'
+                        : 'border-transparent opacity-50 hover:opacity-100'
+                    }`}
+                  >
+                    <img 
+                      src={imgUrl} 
+                      alt={`Thumbnail ${thumbIdx + 1}`} 
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {/* Lightbox Captions / Summary Panel */}
             <div className="max-w-3xl mx-auto text-center text-white pb-4 z-10">
-              <motion.h3 
-                key={`title-${lightboxIndex}`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-xl md:text-3xl font-bold text-white tracking-tight"
-              >
-                {filteredItems[lightboxIndex].title}
-              </motion.h3>
-              <motion.p 
-                key={`desc-${lightboxIndex}`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-slate-300 text-xs md:text-sm mt-2 max-w-2xl mx-auto leading-relaxed"
-              >
-                {filteredItems[lightboxIndex].description}
-              </motion.p>
+              <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
+                {activeAlbum.title}
+              </h3>
+              <p className="text-slate-300 text-xs md:text-sm mt-2 max-w-2xl mx-auto leading-relaxed">
+                {activeAlbum.description}
+              </p>
             </div>
           </motion.div>
         )}
