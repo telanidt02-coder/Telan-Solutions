@@ -18,16 +18,20 @@ interface CultureItem {
 const GALLERY_DATA: CultureItem[] = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200&h=800",
+    image: "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp18.jpg",
     images: [
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1531535934202-f022ee715f15?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200&h=800"
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp1.jpg",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp2.jpg",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp3.jpg",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp4.jpg",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp5.jpg",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp6.jpg",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp11.jpg",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp12.jpg"
     ],
-    title: "Collaborative Spirit",
+    title: "Sports Fest 2026",
     description: "Our teams work side-by-side on high-impact BPO campaigns, fostering an active environment of daily support and mentorship.",
-    category: "Team Life"
+    category: "Sports Fest"
   },
   {
     id: 2,
