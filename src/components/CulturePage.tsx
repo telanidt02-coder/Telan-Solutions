@@ -42,9 +42,11 @@ const GALLERY_DATA: CultureItem[] = [
     id: 2,
     image: "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/xparty/Cparty_intro.JPG",
     images: [
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200&h=800"
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/xparty/xp2.JPG",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/xparty/xp6.JPG",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/xparty/xp13.JPG",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/xparty/xp4.JPG",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/xparty/xp5.JPG"
     ],
     title: "Christmas Party 2026",
     description: "Connecting beyond client lines builds the trust that forms the bedrock of our company success and employee longevity.",
