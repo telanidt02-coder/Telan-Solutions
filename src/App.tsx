@@ -618,7 +618,7 @@ const ExperienceLifeSection = () => {
       description: "Telan Glamorous Christmas, Rock the season. Shine the night.",
     },
     {
-      image: "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/halloween/hallooween_intro.jpg",
+      image: "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/halloween/H1.jpg",
       title: "Halloween Party",
       description: ".",
     },
