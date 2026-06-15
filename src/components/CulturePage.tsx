@@ -70,6 +70,18 @@ const GALLERY_DATA: CultureItem[] = [
     title: "Halloween Party",
     description: "Equipped with dual-monitor layouts, professional-grade noise canceling headsets, and high-speed fiber channels in Ortigas Center, Pasig.",
     category: "Halloween"
+  },
+  {
+     id: 4,
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200&h=800",
+    images: [
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200&h=800"
+    ],
+    title: "Professional Training Courses",
+    description: "Rigorous onboarding and leadership bootcamps designed to sharpen analytical collection, negotiation strategies, and leadership skills.",
+    category: "Growth"
   }
 ];
 
