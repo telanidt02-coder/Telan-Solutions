@@ -12,7 +12,7 @@ interface CultureItem {
   images: string[];
   title: string;
   description: string;
-  category: 'Workspace' | 'Team Life' | 'Growth' | 'Celebrations';
+  category: 'Sports Fest' | 'Christmas Party' | 'Halloween' | 'Training';
 }
 
 const GALLERY_DATA: CultureItem[] = [
@@ -82,12 +82,12 @@ const GALLERY_DATA: CultureItem[] = [
     ],
     title: "Professional Training Courses",
     description: "Rigorous onboarding and leadership bootcamps designed to sharpen analytical collection, negotiation strategies, and leadership skills.",
-    category: "Growth"
+    category: "Training"
   }
 ];
 
 export default function CulturePage() {
-  const [selectedCategory, setSelectedCategory] = useState<'All' | 'Workspace' | 'Team Life' | 'Growth' | 'Celebrations'>('All');
+  const [selectedCategory, setSelectedCategory] = useState<'All' | 'Sports Fest' | 'Christmas Party' | 'Halloween' | 'Training'>('All');
   const [activeAlbum, setActiveAlbum] = useState<CultureItem | null>(null);
   const [activePhotoIndex, setActivePhotoIndex] = useState<number>(0);
   const [isPlayingSlideshow, setIsPlayingSlideshow] = useState(false);
@@ -180,7 +180,7 @@ export default function CulturePage() {
         <div className="container-custom">
           {/* Categories Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-2 mb-12 bg-white p-2.5 rounded-2xl shadow-sm border border-slate-100 max-w-2xl mx-auto">
-            {(['All', 'Workspace', 'Team Life', 'Growth', 'Celebrations'] as const).map((category) => (
+            {(['All', 'Sports Fest', 'Christmas Party', 'Halloween', 'Training'] as const).map((category) => (
               <button
                 key={category}
                 onClick={() => {
