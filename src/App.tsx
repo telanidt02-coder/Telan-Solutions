@@ -1625,7 +1625,7 @@ const AboutUsPage = () => (
             
             <div className="border-t border-slate-200/80 pt-6">
               <h3 className="text-xl font-bold text-brand-blue">Reyman Ilagan</h3>
-              <p className="text-sm font-semibold text-brand-gold uppercase tracking-wider mt-1">Client Service Director</p>
+              <p className="text-sm font-semibold text-brand-gold uppercase tracking-wider mt-1">Business Development and Client Service Director</p>
               <p className="text-xs text-slate-400 mt-1">Telan Solutions</p>
             </div>
           </motion.div>
