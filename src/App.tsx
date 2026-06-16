@@ -1570,6 +1570,69 @@ const AboutUsPage = () => (
       </div>
     </section>
 
+    {/* Director's Statement Section */}
+    <section className="py-24 bg-slate-50 relative overflow-hidden border-t border-slate-100">
+      {/* Visual background flourishes */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-brand-gold rounded-full blur-[120px]" />
+      </div>
+      
+      <div className="container-custom relative z-10">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+          {/* Left Column: Image with beautiful frames */}
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-5 relative"
+          >
+            <div className="relative aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl border-4 border-white z-10">
+              <img 
+                src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/director.jpg" 
+                alt="Reyman Ilagan" 
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
+            </div>
+            
+            {/* Elegant Background Accents */}
+            <div className="absolute -bottom-6 -left-6 w-1/2 h-1/2 bg-brand-gold/10 rounded-[32px] -z-10 blur-xl" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 border-t-4 border-r-4 border-brand-gold/30 rounded-tr-[32px]" />
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-4 border-l-4 border-brand-blue/30 rounded-bl-[32px]" />
+          </motion.div>
+
+          {/* Right Column: Statement Content */}
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+            className="lg:col-span-7 flex flex-col justify-center"
+          >
+            <div className="inline-flex items-center space-x-2 bg-[#003366]/5 text-brand-blue px-4 py-1.5 rounded-full w-fit mb-6 border border-[#003366]/10">
+              <Award className="w-4 h-4 text-brand-gold" />
+              <span className="text-xs font-bold uppercase tracking-widest text-[#003366]">Message from our Director</span>
+            </div>
+            
+            {/* Large quotation mark visual */}
+            <span className="text-8xl font-serif text-brand-gold/20 leading-none h-6 block select-none -translate-x-2">&ldquo;</span>
+            
+            <blockquote className="text-xl md:text-2xl font-medium text-slate-800 leading-relaxed italic mb-8 relative z-10 pr-4">
+              After more than two decades in the banking industry, I chose Telan Solutions because of its exceptional people, strong culture of excellence, and commitment to delivering results. Here, I have the privilege of working alongside highly skilled lawyers and professionals who are setting new standards in collections, recovery, and legal services. Trusted by leading banks and financial institutions, we continue to build a team driven by integrity, innovation, and performance. If you are looking for an environment where talent is valued, growth is encouraged, and impact is recognized, we invite you to join us.
+            </blockquote>
+            
+            <div className="border-t border-slate-200/80 pt-6">
+              <h3 className="text-xl font-bold text-brand-blue">Reyman Ilagan</h3>
+              <p className="text-sm font-semibold text-brand-gold uppercase tracking-wider mt-1">Client Service Director</p>
+              <p className="text-xs text-slate-400 mt-1">Telan Solutions</p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+
     {/* Image Marquee Section */}
     <section className="section-padding bg-white overflow-hidden border-y border-slate-100">
       <div className="container-custom">
