@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ChevronLeft, ChevronRight, MapPin, Phone, Mail, Globe, Award, Users, BookOpen, TrendingUp, CheckCircle2, Quote, Sparkles, Rocket, Heart, Play, Pause, Volume2, Maximize, ExternalLink, Calendar, Building2, Target, Server, ShieldCheck, Cpu, Wifi, Database, Network, Lock, MessageCircle, PhoneCall, BarChart3, LayoutDashboard, Wallet, UserCog, Search, CheckSquare, Navigation2, Smile, Zap, MessageSquareText } from 'lucide-react';
-import { useState, useEffect, useRef, ChangeEvent, FormEvent } from 'react';
+import { Menu, X, ChevronLeft, ChevronRight, MapPin, Phone, Mail, Globe, Award, Users, BookOpen, TrendingUp, CheckCircle2, Quote, Sparkles, Rocket, Heart, Play, Pause, Volume2, Maximize, ExternalLink, Calendar, Building2, Target, Server, ShieldCheck, Cpu, Wifi, Database, Network, Lock, MessageCircle, PhoneCall, BarChart3, LayoutDashboard, Wallet, UserCog, Search, CheckSquare, Navigation2, Smile, Zap, MessageSquareText, Trash2, FileText } from 'lucide-react';
+import { useState, useEffect, useRef, ChangeEvent, FormEvent, DragEvent, MouseEvent } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import CulturePage from './components/CulturePage';
 
@@ -846,10 +846,15 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
 
   const [selectedJob, setSelectedJob] = useState<null | typeof JOBS_DATA[0]>(null);
   const [isApplicationSubmitted, setIsApplicationSubmitted] = useState(false);
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleApply = (job: typeof jobs[0]) => {
     setSelectedJob(job);
     setIsApplicationSubmitted(false);
+    setUploadedFile(null);
+    setIsDragging(false);
   };
 
   const handleSubmit = (e: FormEvent) => {
@@ -858,7 +863,45 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
     setIsApplicationSubmitted(true);
     setTimeout(() => {
       setSelectedJob(null);
+      setUploadedFile(null);
     }, 3000);
+  };
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setUploadedFile(e.target.files[0]);
+    }
+  };
+
+  const handleDragOver = (e: DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      setUploadedFile(e.dataTransfer.files[0]);
+    }
+  };
+
+  const handleBrowseFiles = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  };
+
+  const handleRemoveFile = (e: MouseEvent) => {
+    e.stopPropagation();
+    setUploadedFile(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
   };
 
   return (
@@ -996,10 +1039,63 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
 
                     <div className="space-y-2">
                       <label className="text-sm font-semibold text-slate-700">Upload CV / Resume</label>
-                      <div className="border-2 border-dashed border-slate-200 rounded-xl p-8 text-center hover:border-brand-gold transition-colors cursor-pointer group">
-                        <Rocket className="w-8 h-8 text-slate-300 mx-auto mb-2 group-hover:text-brand-gold transition-colors" />
-                        <p className="text-sm text-slate-500">Click to upload or drag and drop</p>
+                                            
+                      {/* Hidden File Input */}
+                      <input 
+                        type="file"
+                        ref={fileInputRef}
+                        onChange={handleFileChange}
+                        accept=".pdf,.doc,.docx"
+                        className="hidden"
+                        id="resume-file-input"
+                      />
+
+                      <div 
+                        onClick={handleBrowseFiles}
+                        onDragOver={handleDragOver}
+                        onDragLeave={handleDragLeave}
+                        onDrop={handleDrop}
+                        className={`border-2 border-dashed rounded-xl p-8 text-center transition-all duration-300 cursor-pointer group relative ${
+                          isDragging 
+                            ? 'border-brand-gold bg-brand-gold/10 scale-[1.02]' 
+                            : uploadedFile 
+                              ? 'border-green-400 bg-green-50/30' 
+                              : 'border-slate-200 hover:border-brand-gold bg-transparent'
+                        }`}
+                        id="file-upload-dropzone"
+                      >
+                        {uploadedFile ? (
+                          <div className="flex flex-col items-center">
+                            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-3">
+                         <FileText className="w-6 h-6" />
+                            </div>
+                            <p className="text-sm font-semibold text-slate-800 max-w-[280px] truncate" title={uploadedFile.name}>
+                              {uploadedFile.name}
+                            </p>
+                            <p className="text-xs text-slate-400 mt-1">
+                              {(uploadedFile.size / (1024 * 1024)).toFixed(2)} MB
+                            </p>
+                            <button
+                              type="button"
+                              onClick={handleRemoveFile}
+                              className="mt-4 px-3 py-1.5 bg-red-50 text-red-600 hover:bg-red-100 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors flex items-center space-x-1"
+                              id="remove-file-btn"
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                              <span>Remove File</span>
+                            </button>
+                          </div>
+                        ) : (
+                          <div className="transition-all duration-300">
+                            <Rocket className={`w-8 h-8 mx-auto mb-2 transition-colors ${
+                              isDragging ? 'text-brand-gold animate-pulse' : 'text-slate-300 group-hover:text-brand-gold'
+                            }`} />
+                        <p className="text-sm font-medium text-slate-600">
+                              {isDragging ? 'Drop your file here!' : 'Click to upload or drag and drop'}
+                            </p>
                         <p className="text-[10px] text-slate-400 mt-1 uppercase tracking-wider">PDF, DOCX (Max 5MB)</p>
+                             </div>
+                        )}
                       </div>
                     </div>
 
