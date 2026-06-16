@@ -36,7 +36,7 @@ const GALLERY_DATA: CultureItem[] = [
       "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp22.jpg"
     ],
     title: "Sports Fest 2026",
-    description: "Our teams work side-by-side on high-impact BPO campaigns, fostering an active environment of daily support and mentorship.",
+    description: "Sports Fest 2026 is more than just a competition. It is a celebration of teamwork, determination, and the strong relationships that drive our organization forward. This annual event brings employees together through exciting sports and recreational activities that encourage collaboration, friendly competition, and personal growth. Beyond the games, Sports Fest 2026 provides an opportunity to build lasting connections, promote health and wellness, and strengthen the spirit of unity across all teams and departments.",
     category: "Sports Fest"
   },
   {
@@ -50,7 +50,7 @@ const GALLERY_DATA: CultureItem[] = [
       "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/xparty/xp5.JPG"
     ],
     title: "Christmas Party 2026",
-    description: "Connecting beyond client lines builds the trust that forms the bedrock of our company success and employee longevity.",
+    description: "Christmas Party 2026 is a special occasion to come together and celebrate the achievements, friendships, and memories we have built throughout the year. As we embrace the spirit of the holiday season, this event provides an opportunity for everyone to relax, connect, and enjoy a festive atmosphere filled with laughter, entertainment, and appreciation.",
     category: "Christmas Party"
   },
   {
@@ -69,7 +69,7 @@ const GALLERY_DATA: CultureItem[] = [
       "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/halloween/H10.jpg"
     ],
     title: "Halloween Party",
-    description: "Equipped with dual-monitor layouts, professional-grade noise canceling headsets, and high-speed fiber channels in Ortigas Center, Pasig.",
+    description: "Get ready for an unforgettable evening as we celebrate Halloween Party 2026! This exciting event brings everyone together for a night filled with creativity, laughter, and spooky entertainment. From imaginative costumes and themed decorations to fun games, contests, and surprises, the celebration offers a perfect opportunity to showcase your Halloween spirit while enjoying quality time with colleagues and friends.",
     category: "Halloween"
   },
   {
@@ -81,7 +81,7 @@ const GALLERY_DATA: CultureItem[] = [
       "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200&h=800"
     ],
     title: "Professional Training Courses",
-    description: "Rigorous onboarding and leadership bootcamps designed to sharpen analytical collection, negotiation strategies, and leadership skills.",
+    description: "The Training Program 2026 is designed to enhance knowledge, develop essential skills, and support continuous professional growth across the organization. Through structured learning sessions, hands-on activities, and practical discussions, this program aims to equip participants with the tools they need to perform more effectively in their roles.",
     category: "Training"
   }
 ];
