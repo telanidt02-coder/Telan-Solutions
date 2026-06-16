@@ -32,6 +32,7 @@ const GALLERY_DATA: CultureItem[] = [
       "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp14.jpg",
       "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp20.jpg",
       "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp21.jpg",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp23.jpg",
       "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp22.jpg"
     ],
     title: "Sports Fest 2026",
