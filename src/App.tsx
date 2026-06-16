@@ -1589,7 +1589,7 @@ const AboutUsPage = () => (
           >
             <div className="relative aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl border-4 border-white z-10">
               <img 
-                src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/director_black.jpg" 
+                src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/director_rt.jpg" 
                 alt="Reyman Ilagan" 
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
