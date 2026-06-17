@@ -18,7 +18,7 @@ export default defineConfig(({mode}) => {
     },
     build: {
       rollupOptions: {
-        input: 'index.html',
+        input: 'index.html', // Explicitly set the entry point to HTML, not server.ts
       },
     },
     server: {
