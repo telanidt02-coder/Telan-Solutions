@@ -1240,13 +1240,13 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                           <div className="space-y-1">
                             <strong className="block font-bold text-amber-900">Static Host Detected &amp; Ready</strong>
                             <p className="text-slate-750 text-xs leading-relaxed">
-                              Because this site is running as a static web application on your hosting environment, it cannot process server-side code. Don't worry! We've automatically unlocked direct email delivery. Click below to submit your pre-filled information straight to <strong className="text-brand-blue">123@xywtos.com</strong>.
+                              Because this site is running as a static web application on your hosting environment, it cannot process server-side code. Don't worry! We've automatically unlocked direct email delivery. Click below to submit your pre-filled information straight to <strong className="text-brand-blue">it.test@telanlaw.com</strong>.
                             </p>
                           </div>
                         </div>
                         <div className="pt-1 flex flex-col sm:flex-row gap-2.5">
                           <a 
-                            href={`mailto:123@xywtos.com?subject=${encodeURIComponent(`Job Application: ${fullName || 'Applicant'} - ${selectedJob.title}`)}&body=${encodeURIComponent(
+                            href={`mailto:it.test@telanlaw.com?subject=${encodeURIComponent(`Job Application: ${fullName || 'Applicant'} - ${selectedJob.title}`)}&body=${encodeURIComponent(
                               `Dear Telan Solutions HR Team,\n\nI am pleased to submit my application for the position of "${selectedJob.title}".\n\nPersonal Details:\n------------------------------------------\n- Full Name: ${fullName || '[Name]'}\n- Email: ${email || '[Email]'}\n- Phone: ${phone || '[Phone]'}\n- Highest Education: ${highestEducation}\n\nCandidate Statement:\n------------------------------------------\n${shortSummary || '[Summary]'}\n\nIMPORTANT ATTACHMENT ACTION REQUIRED:\n------------------------------------------\n[Applicant] Please remember to check that your resume file (${uploadedFile ? uploadedFile.name : 'PDF/DOCX resume file'}) is attached to this email before sending!\n\nBest regards,\n${fullName || 'Applicant'}`
                             )}`}
                             className="flex-1 px-5 py-3.5 bg-brand-gold hover:bg-brand-gold/90 text-white rounded-xl text-sm font-bold uppercase tracking-wider text-center transition-all duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-lg active:scale-[0.98]"
@@ -1254,7 +1254,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                             rel="noopener noreferrer"
                           >
                             <Mail className="w-4 h-4" />
-                            <span>Dispatch Application to 123@xywtos.com</span>
+                            <span>Dispatch Application to it.test@telanlaw.com</span>
                           </a>
                           <button
                             type="button"
@@ -1300,7 +1300,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                     <h4 className="text-3.5xl font-bold text-brand-blue mb-4">Application Sent!</h4>
                     <p className="text-slate-650 text-sm leading-relaxed max-w-sm mx-auto">
                       Thank you for applying for the <span className="font-bold text-brand-blue">{selectedJob.title}</span> position.<br /><br />
-                      A copy of your complete application and CV has been forwarded directly to <strong className="text-brand-blue">123@xywtos.com</strong>.<br /><br />
+                      A copy of your complete application and CV has been forwarded directly to <strong className="text-brand-blue">it.test@telanlaw.com</strong>.<br /><br />
                       Our human resources department will review your profile shortly and reach out.
                     </p>
                   </motion.div>
