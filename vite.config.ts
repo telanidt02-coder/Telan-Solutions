@@ -16,19 +16,13 @@ export default defineConfig(({mode}) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
-    server: {
-      hmr: process.env.DISABLE_HMR !== 'true',
-    },
     build: {
-      outDir: 'dist',
       rollupOptions: {
         input: 'index.html',
-        output: {
-          entryFileNames: 'assets/[name]-[hash].js',
-          chunkFileNames: 'assets/[name]-[hash].js',
-          assetFileNames: 'assets/[name]-[hash][extname]',
-        },
       },
+    },
+    server: {
+      hmr: process.env.DISABLE_HMR !== 'true',
     },
   };
 });
