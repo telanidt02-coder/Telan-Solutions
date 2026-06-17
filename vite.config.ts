@@ -16,13 +16,14 @@ export default defineConfig(({mode}) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
-    build: {
-      rollupOptions: {
-        external: [], // Ensure this doesn't include 'server.ts'
-      },
-    },
     server: {
       hmr: process.env.DISABLE_HMR !== 'true',
+    },
+    build: {
+      outDir: 'dist',
+      rollupOptions: {
+        input: 'index.html', // Explicitly set the entry point to index.html
+      },
     },
   };
 });
