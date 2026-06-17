@@ -850,21 +850,95 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Form input and feedback states
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [highestEducation, setHighestEducation] = useState('College Graduate');
+  const [shortSummary, setShortSummary] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
   const handleApply = (job: typeof jobs[0]) => {
     setSelectedJob(job);
     setIsApplicationSubmitted(false);
     setUploadedFile(null);
     setIsDragging(false);
+    setFullName('');
+    setEmail('');
+    setPhone('');
+    setHighestEducation('College Graduate');
+    setShortSummary('');
+    setSubmitError(null);
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const getBase64 = (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = error => reject(error);
+    });
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Simulate API call
+   if (!selectedJob) return;
+
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    let fileData = "";
+    let filename = "";
+
+    if (uploadedFile) {
+      try {
+        fileData = await getBase64(uploadedFile);
+        filename = uploadedFile.name;
+      } catch (err) {
+        console.error("Failed to parse file to Base64:", err);
+      }
+    }
+
+    try {
+      const response = await fetch("/api/apply", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName,
+          email,
+          phone,
+          highestEducation,
+          shortSummary,
+          jobTitle: selectedJob.title,
+          fileData,
+          filename
+        }),
+      });
+
+      const data = await response.json();
+      if (response.ok && data.success) {
     setIsApplicationSubmitted(true);
+        setFullName('');
+        setEmail('');
+        setPhone('');
+        setHighestEducation('College Graduate');
+        setShortSummary('');
+        setUploadedFile(null);
     setTimeout(() => {
       setSelectedJob(null);
-      setUploadedFile(null);
-    }, 3000);
+      setIsApplicationSubmitted(false);
+        }, 6000);
+      } else {
+        setSubmitError(data.message || "Failed to submit application. Please try again.");
+      }
+    } catch (err) {
+      setSubmitError("Could not connect to the recruitment system. Please check your internet connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -998,8 +1072,9 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
               {/* Application Form */}
               <div className="md:w-7/12 p-8">
                 <button 
-                  onClick={() => setSelectedJob(null)}
-                  className="absolute top-6 right-6 p-2 hover:bg-slate-100 rounded-full transition-colors hidden md:block"
+                   onClick={() => !isSubmitting && setSelectedJob(null)}
+                  disabled={isSubmitting}
+                  className="absolute top-6 right-6 p-2 hover:bg-slate-100 rounded-full transition-colors hidden md:block disabled:opacity-50"
                 >
                   <X className="w-6 h-6 text-slate-500" />
                 </button>
@@ -1010,29 +1085,65 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                       <h4 className="text-2xl font-bold text-brand-blue">Application Form</h4>
                       <p className="text-slate-500">Please fill in your details to apply for this position.</p>
                     </div>
+                    
+                    {submitError && (
+                      <div className="p-4 bg-red-50 border border-red-150 rounded-2xl text-red-600 text-sm font-medium flex items-start space-x-2.5 shadow-sm">
+                        <span className="text-base select-none leading-none">⚠️</span>
+                        <span>{submitError}</span>
+                      </div>
+                    )}
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label className="text-sm font-semibold text-slate-700">Full Name</label>
-                        <input required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all" placeholder="Juan Dela Cruz" />
+                        <input 
+                          required 
+                          type="text" 
+                          value={fullName}
+                          onChange={(e) => setFullName(e.target.value)}
+                          disabled={isSubmitting}
+                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all disabled:opacity-60 disabled:bg-slate-50" 
+                          placeholder="Juan Dela Cruz" 
+                        />
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-semibold text-slate-700">Email Address</label>
-                        <input required type="email" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all" placeholder="juan@example.com" />
+                         <input 
+                          required 
+                          type="email" 
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          disabled={isSubmitting}
+                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all disabled:opacity-60 disabled:bg-slate-50" 
+                          placeholder="juan@example.com" 
+                        />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label className="text-sm font-semibold text-slate-700">Phone Number</label>
-                        <input required type="tel" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all" placeholder="+63 9XX XXX XXXX" />
+                         <input 
+                          required 
+                          type="tel" 
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
+                          disabled={isSubmitting}
+                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all disabled:opacity-60 disabled:bg-slate-50" 
+                          placeholder="+63 9XX XXX XXXX" 
+                        />
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-semibold text-slate-700">Highest Education</label>
-                        <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent bg-white">
-                          <option>College Graduate</option>
-                          <option>Undergraduate</option>
-                          <option>High School</option>
+                         <select 
+                          value={highestEducation}
+                          onChange={(e) => setHighestEducation(e.target.value)}
+                          disabled={isSubmitting}
+                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent bg-white disabled:opacity-65 disabled:bg-slate-50"
+                        >
+                          <option value="College Graduate">College Graduate</option>
+                          <option value="Undergraduate">Undergraduate</option>
+                          <option value="High School">High School</option>
                         </select>
                       </div>
                     </div>
@@ -1048,14 +1159,17 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                         accept=".pdf,.doc,.docx"
                         className="hidden"
                         id="resume-file-input"
+                        disabled={isSubmitting}
                       />
 
                       <div 
-                        onClick={handleBrowseFiles}
-                        onDragOver={handleDragOver}
-                        onDragLeave={handleDragLeave}
-                        onDrop={handleDrop}
-                        className={`border-2 border-dashed rounded-xl p-8 text-center transition-all duration-300 cursor-pointer group relative ${
+                        onClick={() => !isSubmitting && handleBrowseFiles()}
+                        onDragOver={(e) => !isSubmitting && handleDragOver(e)}
+                        onDragLeave={(e) => !isSubmitting && handleDragLeave(e)}
+                        onDrop={(e) => !isSubmitting && handleDrop(e)}
+                        className={`border-2 border-dashed rounded-xl p-8 text-center transition-all duration-300 relative ${
+                          isSubmitting ? 'cursor-not-allowed opacity-60 bg-slate-50' : 'cursor-pointer group'
+                        } ${
                           isDragging 
                             ? 'border-brand-gold bg-brand-gold/10 scale-[1.02]' 
                             : uploadedFile 
@@ -1075,6 +1189,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                             <p className="text-xs text-slate-400 mt-1">
                               {(uploadedFile.size / (1024 * 1024)).toFixed(2)} MB
                             </p>
+                            {!isSubmitting && (
                             <button
                               type="button"
                               onClick={handleRemoveFile}
@@ -1084,6 +1199,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                               <Trash2 className="w-3.5 h-3.5" />
                               <span>Remove File</span>
                             </button>
+                            )}
                           </div>
                         ) : (
                           <div className="transition-all duration-300">
@@ -1101,11 +1217,32 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
 
                     <div className="space-y-2">
                       <label className="text-sm font-semibold text-slate-700">Why should we hire you? (Short summary)</label>
-                      <textarea rows={3} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all" placeholder="Tell us something about your experience..."></textarea>
+                      <textarea 
+                        rows={3} 
+                        value={shortSummary}
+                        onChange={(e) => setShortSummary(e.target.value)}
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all disabled:opacity-60 disabled:bg-slate-50" 
+                        placeholder="Tell us something about your experience..."
+                      ></textarea>
                     </div>
 
-                    <button type="submit" className="btn-primary w-full py-4 text-lg font-bold">
-                      Submit My Application
+                    <button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="btn-primary w-full py-4 text-lg font-bold flex items-center justify-center space-x-2 disabled:bg-slate-300 disabled:border-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          <span>Sending Application...</span>
+                        </>
+                      ) : (
+                        <span>Submit My Application</span>
+                      )}
                     </button>
                   </form>
                 ) : (
@@ -1114,13 +1251,14 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                     animate={{ opacity: 1, scale: 1 }}
                     className="h-full flex flex-col items-center justify-center text-center p-8"
                   >
-                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-6">
-                      <CheckCircle2 className="w-10 h-10" />
+                     <div className="w-20 h-20 bg-green-150/10 text-green-600 rounded-full flex items-center justify-center border-2 border-green-500/20 mb-6">
+                      <CheckCircle2 className="w-10 h-10 text-green-600" />
                     </div>
-                    <h4 className="text-3xl font-bold text-brand-blue mb-4">Application Sent!</h4>
-                    <p className="text-slate-600 max-w-sm mx-auto">
-                      Thank you for applying to be our next <span className="font-bold text-brand-blue">{selectedJob.title}</span>. 
-                      Our HR team will review your profile and get back to you soon.
+                    <h4 className="text-3.5xl font-bold text-brand-blue mb-4">Application Sent!</h4>
+                    <p className="text-slate-650 text-sm leading-relaxed max-w-sm mx-auto">
+                      Thank you for applying for the <span className="font-bold text-brand-blue">{selectedJob.title}</span> position.<br /><br />
+                      A copy of your complete application and CV has been forwarded directly to <strong className="text-brand-blue">123@xywtos.com</strong>.<br /><br />
+                      Our human resources department will review your profile shortly and reach out.
                     </p>
                   </motion.div>
                 )}
