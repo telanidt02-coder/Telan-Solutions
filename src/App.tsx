@@ -859,6 +859,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
   const [shortSummary, setShortSummary] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [showMailtoFallback, setShowMailtoFallback] = useState(false);
 
   const handleApply = (job: typeof jobs[0]) => {
     setSelectedJob(job);
@@ -871,6 +872,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
     setHighestEducation('College Graduate');
     setShortSummary('');
     setSubmitError(null);
+    setShowMailtoFallback(false);
   };
 
   const getBase64 = (file: File): Promise<string> => {
@@ -928,15 +930,18 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
         setHighestEducation('College Graduate');
         setShortSummary('');
         setUploadedFile(null);
+        setShowMailtoFallback(false);
     setTimeout(() => {
       setSelectedJob(null);
       setIsApplicationSubmitted(false);
         }, 6000);
       } else {
         setSubmitError(data.message || "Failed to submit application. Please try again.");
+        setShowMailtoFallback(true);
       }
     } catch (err) {
       setSubmitError("Could not connect to the recruitment system. Please check your internet connection.");
+      setShowMailtoFallback(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -1227,6 +1232,43 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                         placeholder="Tell us something about your experience..."
                       ></textarea>
                     </div>
+
+                    {showMailtoFallback && (
+                      <div className="p-5 bg-amber-50 border border-amber-200 rounded-2xl text-amber-950 text-sm space-y-4 shadow-sm">
+                        <div className="flex items-start space-x-2.5">
+                          <span className="text-xl select-none leading-none">💡</span>
+                          <div className="space-y-1">
+                            <strong className="block font-bold text-amber-900">Static Host Detected &amp; Ready</strong>
+                            <p className="text-slate-750 text-xs leading-relaxed">
+                              Because this site is running as a static web application on your hosting environment, it cannot process server-side code. Don't worry! We've automatically unlocked direct email delivery. Click below to submit your pre-filled information straight to <strong className="text-brand-blue">123@xywtos.com</strong>.
+                            </p>
+                          </div>
+                        </div>
+                        <div className="pt-1 flex flex-col sm:flex-row gap-2.5">
+                          <a 
+                            href={`mailto:123@xywtos.com?subject=${encodeURIComponent(`Job Application: ${fullName || 'Applicant'} - ${selectedJob.title}`)}&body=${encodeURIComponent(
+                              `Dear Telan Solutions HR Team,\n\nI am pleased to submit my application for the position of "${selectedJob.title}".\n\nPersonal Details:\n------------------------------------------\n- Full Name: ${fullName || '[Name]'}\n- Email: ${email || '[Email]'}\n- Phone: ${phone || '[Phone]'}\n- Highest Education: ${highestEducation}\n\nCandidate Statement:\n------------------------------------------\n${shortSummary || '[Summary]'}\n\nIMPORTANT ATTACHMENT ACTION REQUIRED:\n------------------------------------------\n[Applicant] Please remember to check that your resume file (${uploadedFile ? uploadedFile.name : 'PDF/DOCX resume file'}) is attached to this email before sending!\n\nBest regards,\n${fullName || 'Applicant'}`
+                            )}`}
+                            className="flex-1 px-5 py-3.5 bg-brand-gold hover:bg-brand-gold/90 text-white rounded-xl text-sm font-bold uppercase tracking-wider text-center transition-all duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-lg active:scale-[0.98]"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Mail className="w-4 h-4" />
+                            <span>Dispatch Application to 123@xywtos.com</span>
+                          </a>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setShowMailtoFallback(false);
+                              setSubmitError(null);
+                            }}
+                            className="px-4 py-3 bg-white text-slate-700 hover:bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-center transition-all duration-300"
+                          >
+                            Reset Form
+                          </button>
+                        </div>
+                      </div>
+                    )}
 
                     <button 
                       type="submit" 
