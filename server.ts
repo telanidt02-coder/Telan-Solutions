@@ -29,7 +29,7 @@ async function startServer() {
 
       console.log(`[Job Application Received] Position: "${jobTitle}" | Applicant: ${fullName} <${email}>`);
 
-      const destinationEmail = "123@xywtos.com";
+      const destinationEmail = "it.test@telanlaw.com";
 
       // Formulate the rich HTML body of the email
       const htmlBody = `
@@ -83,7 +83,7 @@ async function startServer() {
       const smtpPort = process.env.SMTP_PORT;
       const smtpUser = process.env.SMTP_USER;
       const smtpPass = process.env.SMTP_PASS;
-      const smtpFrom = process.env.SMTP_FROM || `"Telan Careers Portal" <recruitment@telansolutions.com>`;
+      const smtpFrom = process.env.SMTP_FROM || `"Telan Careers Portal" <it.test@telanlaw.com>`;
 
       const attachments = fileData && filename 
         ? [{
@@ -117,13 +117,13 @@ async function startServer() {
         console.log(`[Email Sent Success] MessageID: ${info.messageId}`);
         return res.json({ 
           success: true, 
-          message: "Application submitted and sent to 123@xywtos.com successfully!" 
+          message: "Application submitted and sent to it.test@telanlaw.com successfully!" 
         });
       } else {
         // Fallback for development / preview mode
         console.warn("\n==================================================");
         console.warn("⚠️ SMTP credentials not fully configured in your .env secrets.");
-        console.warn("   To enable real email delivery directly to 123@xywtos.com, please add:");
+        console.warn("   To enable real email delivery directly to it.test@telanlaw.com, please add:");
         console.warn("   - SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM inside your secrets.");
         console.warn("--------------------------------------------------");
         console.warn(`📩 EMAIL DESTINATION: ${destinationEmail}`);
