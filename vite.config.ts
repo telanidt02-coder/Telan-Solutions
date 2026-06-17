@@ -19,7 +19,6 @@ export default defineConfig(({mode}) => {
     build: {
       rollupOptions: {
         input: 'index.html',
-        external: [],
       },
     },
     server: {
