@@ -74,13 +74,13 @@ const GALLERY_DATA: CultureItem[] = [
   },
   {
      id: 4,
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200&h=800",
+    image: "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/training/t1.jpg",
     images: [
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200&h=800",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/training/t1.jpg",
+      "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/training/t2.jpg",
       "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200&h=800"
     ],
-    title: "Professional Training Courses",
+    title: "Training",
     description: "The Training Program 2026 is designed to enhance knowledge, develop essential skills, and support continuous professional growth across the organization. Through structured learning sessions, hands-on activities, and practical discussions, this program aims to equip participants with the tools they need to perform more effectively in their roles.",
     category: "Training"
   }
