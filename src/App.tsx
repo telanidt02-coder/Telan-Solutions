@@ -271,7 +271,7 @@ const About = () => (
             <motion.img 
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
-              src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/heritage-image.png"  
+              src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/telan-bldg.png"  
               alt="Telan Solutions Office Interior"
               className="w-full h-full object-cover rounded-3xl"
               loading="lazy"
@@ -1801,7 +1801,7 @@ const AboutUsPage = () => (
              <div className="sticky top-32">
                 <div className="aspect-[4/5] rounded-[48px] overflow-hidden shadow-2xl border-2 border-slate-50">
                    <img 
-                      src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/heritage-image.png" 
+                      src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/telan-bldg.png" 
                       className="w-full h-full object-cover" 
                       alt="Telan Solutions Office"
                    />
