@@ -1972,8 +1972,6 @@ const AboutUsPage = () => (
         </motion.div>
       </div>
     </section>
-
-    <CTASection />
   </main>
 );
 
