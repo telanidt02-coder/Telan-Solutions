@@ -208,7 +208,7 @@ const JOBS_DATA = [
 // --- Sections ---
 
 const Hero = () => (
-  <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-blue">
+  <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-blue">
     <div className="absolute inset-0 z-0">
       <img 
         src="http://telansolutions.com/wp-content/uploads/2016/08/TELAN-24-642x300.jpg" 
