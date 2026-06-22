@@ -68,11 +68,11 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || !isHomePage ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
-          <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg shadow-brand-gold/10">
+          <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-brand-gold/10">
             <img 
               src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/logo.png" 
               alt="Telan Solutions Logo" 
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-full object-cover rounded-full transition-transform duration-500 group-hover:scale-110"
             />
           </div>
           <span className={`text-xl font-bold tracking-tight ${isScrolled || !isHomePage ? 'text-brand-blue' : 'text-white'}`}>
