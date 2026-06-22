@@ -1373,11 +1373,11 @@ const Footer = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div className="space-y-6">
           <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
-            <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg shadow-brand-gold/10 border border-white/10">
+            <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-brand-gold/10 border border-white/10">
               <img 
                 src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/logo.png" 
                 alt="Telan Solutions Logo" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-full"
               />
             </div>
             <span className="text-xl font-bold text-white tracking-tight">
