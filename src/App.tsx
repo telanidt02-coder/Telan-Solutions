@@ -629,7 +629,7 @@ const ExperienceLifeSection = () => {
       description: "Telan yearly sports festival.",
     },
     {
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200&h=675",
+      image: "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/training/t1.jpg",
       title: "Training",
       description: ".",
     }
