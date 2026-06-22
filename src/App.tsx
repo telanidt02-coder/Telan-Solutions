@@ -1744,7 +1744,7 @@ const AboutUsPage = () => (
           animate={{ opacity: 1, y: 0 }}
           className="text-5xl md:text-7xl font-bold mb-8"
         >
-          About <span className="text-brand-gold">Telan Solutions</span>
+        <span className="text-brand-gold">Telan Solutions</span>
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
