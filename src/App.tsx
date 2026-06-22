@@ -1757,37 +1757,6 @@ const AboutUsPage = () => (
       </div>
     </section>
 
-    {/* Corporate Video Section */}
-    <section className="py-20 bg-slate-50 overflow-hidden">
-      <div className="container-custom">
-        <SectionHeader 
-          title="Our Corporate Story" 
-          subtitle="Watch how we’ve grown into one of the country’s leading receivables management partners."
-        />
-        
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.98 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="relative max-w-5xl mx-auto"
-        >
-          <div className="aspect-video rounded-[40px] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)] border-8 border-white group">
-             <iframe 
-               src="https://drive.google.com/file/d/1yzYod-vtrJoZyiafmxucjabIRDdskLau/preview"
-               className="w-full h-full border-none"
-               allow="autoplay; encrypted-media"
-               allowFullScreen
-               title="Telan Solutions Corporate Video"
-             />
-          </div>
-          
-          {/* Decorative accents */}
-          <div className="absolute -top-12 -right-12 w-48 h-48 bg-brand-gold/5 rounded-full blur-[80px] -z-10" />
-          <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-brand-blue/5 rounded-full blur-[80px] -z-10" />
-        </motion.div>
-      </div>
-    </section>
-
     {/* Detailed History/About Content */}
     <section className="section-padding">
       <div className="container-custom">
