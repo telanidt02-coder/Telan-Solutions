@@ -6,7 +6,6 @@ import CulturePage from './components/CulturePage';
 
 // --- Shared Components ---
 
-
 const SectionHeader = ({ title, subtitle, light = false, boldSubtitle = false }: { title: string; subtitle?: string; light?: boolean; boldSubtitle?: boolean }) => (
   <div className="mb-12 text-center">
     <motion.h2 
@@ -80,7 +79,7 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Desktop Links */}
+       {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
              link.isPage ? (
@@ -843,10 +842,6 @@ const ExperienceLifeSection = () => {
 };
 
 const JobOpenings = ({ limit }: { limit?: number }) => {
-  const jobs = limit ? JOBS_DATA.slice(0, limit) : JOBS_DATA;
-
-  const [selectedJob, setSelectedJob] = useState<null | typeof JOBS_DATA[0]>(null);
-  const [isApplicationSubmitted, setIsApplicationSubmitted] = useState(false);const JobOpenings = ({ limit }: { limit?: number }) => {
   const jobs = limit ? JOBS_DATA.slice(0, limit) : JOBS_DATA;
 
   const [selectedJob, setSelectedJob] = useState<null | typeof JOBS_DATA[0]>(null);
