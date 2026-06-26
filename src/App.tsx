@@ -885,6 +885,29 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
     });
   };
 
+  const handleCloseModal = () => {
+    setSelectedJob(null);
+    setIsApplicationSubmitted(false);
+    setUploadedFile(null);
+    setIsDragging(false);
+    setUploadError(null);
+    setSubmissionError(null);
+    setSubmittingPhase('idle');
+    setSubmissionProgress(0);
+    setSubmittedEmail('');
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      highestEducation: 'College Graduate',
+      branch: 'Pasig City (Main Office)',
+      coverLetter: ''
+    });
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+  
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setSubmissionError(null);
@@ -895,6 +918,28 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
       return;
     }
 
+    // Capture values into local constants first so we can clear inputs synchronously
+    const currentFormData = { ...formData };
+    const currentUploadedFile = uploadedFile;
+    const currentJobTitle = selectedJob?.title || 'General Applicant';
+
+    // Store the email for the confirmation view
+    setSubmittedEmail(currentFormData.email);
+
+    // Auto-clear the form fields and uploaded file immediately
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      highestEducation: 'College Graduate',
+      branch: 'Pasig City (Main Office)',
+      coverLetter: ''
+    });
+    setUploadedFile(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+    
     setSubmittingPhase('reading');
     setSubmissionProgress(15);
 
@@ -918,16 +963,16 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
         const base64String = (event.target.result as string).split(',')[1];
         
         const payload = {
-          fullName: formData.fullName,
-          email: formData.email,
-          phone: formData.phone,
-          highestEducation: formData.highestEducation,
-          branch: formData.branch,
-          position: selectedJob?.title || 'General Applicant',
-          message: formData.coverLetter,
+          fullName: currentFormData.fullName,
+          email: currentFormData.email,
+          phone: currentFormData.phone,
+          highestEducation: currentFormData.highestEducation,
+          branch: currentFormData.branch,
+          position: currentJobTitle,
+          message: currentFormData.coverLetter,
           fileData: base64String,
-          fileName: uploadedFile.name,
-          fileType: uploadedFile.type || 'application/pdf'
+          fileName: currentUploadedFile.name,
+          fileType: currentUploadedFile.type || 'application/pdf'
         };
 
         setSubmissionProgress(75);
@@ -1099,7 +1144,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => {
-                if (submittingPhase === 'idle') setSelectedJob(null);
+                if (submittingPhase === 'idle') handleCloseModal();
               }}
               className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"
             />
@@ -1114,7 +1159,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
               <div className="md:w-5/12 bg-slate-50 p-8 border-b md:border-b-0 md:border-r border-slate-200">
                 <button 
                   onClick={() => {
-                    if (submittingPhase === 'idle') setSelectedJob(null);
+                    if (submittingPhase === 'idle') handleCloseModal();
                   }}
                   disabled={submittingPhase !== 'idle'}
                   className="mb-8 p-2 hover:bg-slate-200 rounded-full transition-colors md:hidden absolute top-4 right-4"
@@ -1155,7 +1200,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
               <div className="md:w-7/12 p-8 relative flex flex-col justify-between">
                 {submittingPhase === 'idle' && (
                   <button 
-                    onClick={() => setSelectedJob(null)}
+                    onClick={() => handleCloseModal()}
                     className="absolute top-6 right-6 p-2 hover:bg-slate-100 rounded-full transition-colors hidden md:block"
                   >
                     <X className="w-6 h-6 text-slate-500" />
@@ -1361,10 +1406,10 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                       Thank you for applying to be our next <span className="font-bold text-brand-blue">{selectedJob.title}</span>! 
                     </p>
                     <p className="text-slate-500 text-xs max-w-xs mx-auto mt-2 leading-relaxed">
-                      A validation and receipt confirmation email has been sent to <span className="font-semibold text-brand-blue">{formData.email}</span>, and files recorded to Google Sheets database.
+                      A validation and receipt confirmation email has been sent to <span className="font-semibold text-brand-blue">{submittedEmail}</span>, and files recorded to Google Sheets database.
                     </p>
                     <button 
-                      onClick={() => setSelectedJob(null)}
+                      onClick={() => handleCloseModal()}
                       className="mt-6 px-6 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-sm font-semibold transition-colors"
                     >
                       Close Window
