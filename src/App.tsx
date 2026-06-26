@@ -918,7 +918,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
       return;
     }
 
-    // Capture values into local constants first so we can clear inputs synchronously
+   // Capture values into local constants first so we can clear inputs synchronously
     const currentFormData = { ...formData };
     const currentUploadedFile = uploadedFile;
     const currentJobTitle = selectedJob?.title || 'General Applicant';
@@ -1017,7 +1017,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
       }
     };
 
-    reader.readAsDataURL(uploadedFile);
+    reader.readAsDataURL(currentUploadedFile);
   };
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
