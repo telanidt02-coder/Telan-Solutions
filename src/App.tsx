@@ -860,6 +860,8 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
     coverLetter: ''
   });
 
+  const [submittedEmail, setSubmittedEmail] = useState('');
+  
   // Upload and Submission Progress Tracking
   const [uploadError, setUploadError] = useState<string | null>(null);
   const [submissionError, setSubmissionError] = useState<string | null>(null);
@@ -875,6 +877,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
     setSubmissionError(null);
     setSubmittingPhase('idle');
     setSubmissionProgress(0);
+    setSubmittedEmail('');
     setFormData({
       fullName: '',
       email: '',
@@ -918,7 +921,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
       return;
     }
 
-   // Capture values into local constants first so we can clear inputs synchronously
+    // Capture values into local constants first so we can clear inputs synchronously
     const currentFormData = { ...formData };
     const currentUploadedFile = uploadedFile;
     const currentJobTitle = selectedJob?.title || 'General Applicant';
@@ -1017,7 +1020,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
       }
     };
 
-    reader.readAsDataURL(currentUploadedFile);
+   reader.readAsDataURL(currentUploadedFile);
   };
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -1159,7 +1162,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
               <div className="md:w-5/12 bg-slate-50 p-8 border-b md:border-b-0 md:border-r border-slate-200">
                 <button 
                   onClick={() => {
-                    if (submittingPhase === 'idle') handleCloseModal();
+                   if (submittingPhase === 'idle') handleCloseModal();
                   }}
                   disabled={submittingPhase !== 'idle'}
                   className="mb-8 p-2 hover:bg-slate-200 rounded-full transition-colors md:hidden absolute top-4 right-4"
@@ -1387,6 +1390,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                         />
                       </div>
 
+
                       <button type="submit" className="btn-primary w-full py-3 text-base font-bold">
                         Submit My Application
                       </button>
@@ -1406,7 +1410,7 @@ const JobOpenings = ({ limit }: { limit?: number }) => {
                       Thank you for applying to be our next <span className="font-bold text-brand-blue">{selectedJob.title}</span>! 
                     </p>
                     <p className="text-slate-500 text-xs max-w-xs mx-auto mt-2 leading-relaxed">
-                      A validation and receipt confirmation email has been sent to <span className="font-semibold text-brand-blue">{submittedEmail}</span>, and files recorded to Google Sheets database.
+                     A validation and receipt confirmation email has been sent to <span className="font-semibold text-brand-blue">{submittedEmail}</span>, and files recorded to Google Sheets database.
                     </p>
                     <button 
                       onClick={() => handleCloseModal()}
