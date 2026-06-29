@@ -402,9 +402,9 @@ const WhyWorkWithUs = () => {
 
   const testimonials = [
     {
-      quote: "I am grateful to Telan Solutions for believing in my potential and giving me opportunities to lead, learn, and grow. The company helped me become more efficient, resilient, and confident, while also shaping me into a better individual beyond the workplace.",
-      name: "Edwin Devilles",
-      role: "Team Manager, Joined 2016",
+      quote: "What makes me proud to be part of TELAN is that we don't simply focus on collections—we focus on people. We help clients manage their finances, navigate financial challenges, and take meaningful steps toward long-term financial freedom. Seeing them regain control of their financial situation makes our work truly fulfilling.",
+      name: "Mark Griarte",
+      role: "Operations Manager, Joined 2024",
       images: [
         "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/edwin_devilles.png",
 
@@ -417,6 +417,15 @@ const WhyWorkWithUs = () => {
       images: [
         "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/yamson.png",
         
+      ]
+    },
+     {
+      quote: "I am grateful to Telan Solutions for believing in my potential and giving me opportunities to lead, learn, and grow. The company helped me become more efficient, resilient, and confident, while also shaping me into a better individual beyond the workplace.",
+      name: "Edwin Devilles",
+      role: "Team Manager, Joined 2016",
+      images: [
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/edwin_devilles.png",
+
       ]
     },
         {
