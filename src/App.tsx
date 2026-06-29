@@ -406,7 +406,7 @@ const WhyWorkWithUs = () => {
       name: "Mark Griarte",
       role: "Operations Manager, Joined 2024",
       images: [
-        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/edwin_devilles.png",
+        "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/OM.jpg",
 
       ]
     },
