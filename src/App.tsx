@@ -1627,6 +1627,12 @@ const Footer = () => (
             >
               <Facebook className="w-5 h-5" />
             </a>
+            <Link 
+              to="/" 
+              className="p-1 text-slate-400 hover:text-brand-gold transition-colors duration-200"
+              title="Visit Web Home"
+            >
+              <Globe className="w-5 h-5" />
             </Link>
             <a 
               href="tel:+63286406600" 
@@ -1646,7 +1652,7 @@ const Footer = () => (
 
           <div className="pt-4 border-t border-slate-900 flex items-center space-x-3.5">
             <img 
-              src="https://ritm.gov.ph/wp-content/uploads/2023/07/NPC-Seal-Registered.png" 
+              src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/NPC_DPO_DPS_CERT.png" 
               alt="National Privacy Commission Registered" 
               className="h-12 w-auto object-contain bg-white rounded-lg p-1 shadow-md shadow-black/30 border border-slate-800 shrink-0"
               onError={(e) => {
