@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ChevronLeft, ChevronRight, MapPin, Phone, Mail, Globe, Award, Users, BookOpen, TrendingUp, CheckCircle2, Quote, Sparkles, Rocket, Heart, Play, Pause, Volume2, Maximize, ExternalLink, Calendar, Building2, Target, Server, ShieldCheck, Cpu, Wifi, Database, Network, Lock, MessageCircle, PhoneCall, BarChart3, LayoutDashboard, Wallet, UserCog, Search, CheckSquare, Navigation2, Smile, Zap, MessageSquareText, Trash2, FileText, RefreshCw } from 'lucide-react';
+import { Menu, X, ChevronLeft, ChevronRight, MapPin, Phone, Mail, Globe, Award, Users, BookOpen, TrendingUp, CheckCircle2, Quote, Sparkles, Rocket, Heart, Play, Pause, Volume2, Maximize, ExternalLink, Calendar, Building2, Target, Server, ShieldCheck, Cpu, Wifi, Database, Network, Lock, MessageCircle, PhoneCall, BarChart3, LayoutDashboard, Wallet, UserCog, Search, CheckSquare, Navigation2, Smile, Zap, MessageSquareText, Trash2, FileText, RefreshCw, Facebook } from 'lucide-react';
 import { useState, useEffect, useRef, ChangeEvent, FormEvent, DragEvent, MouseEvent } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import CulturePage from './components/CulturePage';
@@ -1617,10 +1617,48 @@ const Footer = () => (
           <p className="text-slate-400">
             A premier receivables management firm based in the Philippines, dedicated to excellence and people-first culture.
           </p>
-          <div className="flex space-x-4">
-            <Globe className="w-5 h-5 cursor-pointer hover:text-brand-gold" />
-            <Phone className="w-5 h-5 cursor-pointer hover:text-brand-gold" />
-            <Mail className="w-5 h-5 cursor-pointer hover:text-brand-gold" />
+          <div className="flex space-x-4 items-center">
+            <a 
+              href="https://www.facebook.com/teamtelan/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="p-1 text-slate-400 hover:text-brand-gold transition-colors duration-200"
+              title="Follow us on Facebook"
+            >
+              <Facebook className="w-5 h-5" />
+            </a>
+            </Link>
+            <a 
+              href="tel:+63286406600" 
+              className="p-1 text-slate-400 hover:text-brand-gold transition-colors duration-200"
+              title="Call us"
+            >
+              <Phone className="w-5 h-5" />
+            </a>
+            <a 
+              href="mailto:info@telanlaw.com" 
+              className="p-1 text-slate-400 hover:text-brand-gold transition-colors duration-200"
+              title="Email us"
+            >
+              <Mail className="w-5 h-5" />
+            </a>
+          </div>
+
+          <div className="pt-4 border-t border-slate-900 flex items-center space-x-3.5">
+            <img 
+              src="https://ritm.gov.ph/wp-content/uploads/2023/07/NPC-Seal-Registered.png" 
+              alt="National Privacy Commission Registered" 
+              className="h-12 w-auto object-contain bg-white rounded-lg p-1 shadow-md shadow-black/30 border border-slate-800 shrink-0"
+              onError={(e) => {
+                e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/e/ec/National_Privacy_Commission_%28NPC%29.svg";
+              }}
+            />
+            <div className="text-left">
+              <span className="block text-[10px] font-bold text-brand-gold tracking-wider uppercase">NPC Registered</span>
+              <span className="block text-[10px] text-slate-400 font-medium leading-normal mt-0.5">
+                Compliant with the Data Privacy Act of 2012.
+              </span>
+            </div>
           </div>
         </div>
         
