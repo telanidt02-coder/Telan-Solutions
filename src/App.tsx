@@ -210,7 +210,7 @@ const Hero = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-blue">
     <div className="absolute inset-0 z-0">
       <img 
-        src="http://telansolutions.com/wp-content/uploads/2016/08/TELAN-24-642x300.jpg" 
+        src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/Telan_Landing.jpg" 
         alt="Telan Solutions Office" 
         className="w-full h-full object-cover opacity-30 scale-105"
       />
