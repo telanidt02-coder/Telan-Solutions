@@ -1600,8 +1600,7 @@ const CTASection = () => (
 const Footer = () => (
   <footer className="pt-20 pb-10 bg-slate-950 text-slate-300">
     <div className="container-custom">
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 items-start">
-        {/* Column 1: Telan Solutions Brand Details */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div className="space-y-6">
           <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
             <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-brand-gold/10 border border-white/10">
@@ -1615,10 +1614,10 @@ const Footer = () => (
               TELAN SOLUTIONS
             </span>
           </Link>
-          <p className="text-slate-400 text-sm leading-relaxed">
+          <p className="text-slate-400">
             A premier receivables management firm based in the Philippines, dedicated to excellence and people-first culture.
           </p>
-          <div className="flex space-x-4 items-center pt-2">
+          <div className="flex space-x-4 items-center">
             <a 
               href="https://www.facebook.com/teamtelan/" 
               target="_blank" 
@@ -1663,63 +1662,79 @@ const Footer = () => (
           </ul>
         </div>
 
-          {/* Column 3: NPC Privacy Registration (Centered & Prominent) */}
-        <div className="flex flex-col items-center justify-center text-center p-6 bg-slate-900/40 border border-slate-900 rounded-3xl space-y-4 shadow-inner">
-          <div className="relative group">
-            {/* Elegant Ambient Gold Glow backing the Seal */}
-            <div className="absolute -inset-2 bg-brand-gold/5 rounded-2xl blur-xl group-hover:bg-brand-gold/15 transition-all duration-500" />
+          <div className="pt-4 border-t border-slate-800/80 flex items-center space-x-3.5">
             <img 
               src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/NPC_DPO_DPS_CERT.png" 
               alt="National Privacy Commission Registered" 
-              className="relative h-28 w-auto object-contain bg-white rounded-2xl p-2.5 shadow-xl border border-slate-800 transition-transform duration-500 group-hover:scale-105"
+              className="h-12 w-auto object-contain bg-white rounded-lg p-1 shadow-md shadow-black/30 border border-slate-800 shrink-0"
               onError={(e) => {
                 e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/e/ec/National_Privacy_Commission_%28NPC%29.svg";
               }}
             />
+            <div className="text-left">
+              <span className="block text-[10px] font-bold text-brand-gold tracking-wider uppercase">NPC Registered</span>
+              <span className="block text-[10px] text-slate-400 font-medium leading-normal mt-0.5">
+                Compliant with the Data Privacy Act of 2012.
+              </span>
             </div>
-          <div className="space-y-1.5 max-w-[200px]">
-            <span className="block text-xs font-bold text-brand-gold tracking-widest uppercase">NPC Registered</span>
-            <p className="text-[11px] text-slate-400 font-medium leading-relaxed">
-              Fully compliant with the Philippine Data Privacy Act of 2012 (RA 10173). Secure receivables management.
-            </p>
           </div>
         </div>
         
-         {/* Column 4: Location, Contact & Interactive Office Map */}
-        <div className="space-y-5">
-          <h4 className="text-white font-bold text-lg relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-brand-gold">
-            Location
-            </h4>
-          <div className="space-y-3.5 text-xs">
+          <div>
+          <h4 className="text-white font-bold mb-6">Quick Links</h4>
+          <ul className="space-y-4">
+            <li><Link to="/" className="hover:text-brand-gold">Home</Link></li>
+            <li><Link to="/about" className="hover:text-brand-gold">About</Link></li>
+            <li><Link to="/culture" className="hover:text-brand-gold">Our Culture</Link></li>
+            <li><Link to="/technology" className="hover:text-brand-gold">Technology</Link></li>
+            <li><Link to="/jobs" className="hover:text-brand-gold">Open Jobs</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-white font-bold mb-6">Location</h4>
+          <div className="space-y-4 text-sm">
             <p className="flex items-start">
-               <MapPin className="w-4 h-4 mr-2.5 text-brand-gold shrink-0 mt-0.5" />
-              <span className="leading-relaxed">One San Miguel Avenue Building, Shaw Blvd Ortigas Center, Pasig City, Philippines</span>
+               <MapPin className="w-5 h-5 mr-3 text-brand-gold shrink-0" />
+              <span>One San Miguel Avenue Building, Shaw Blvd Ortigas Center, Pasig, <br />NCR, Philippines</span>
             </p>
             <p className="flex items-center">
-              <Phone className="w-4 h-4 mr-2.5 text-brand-gold shrink-0" />
+              <Phone className="w-5 h-5 mr-3 text-brand-gold" />
               <span>+63 (02) 8640-6600</span>
             </p>
             <p className="flex items-center">
-              <Mail className="w-4 h-4 mr-2.5 text-brand-gold shrink-0" />
+              <Mail className="w-5 h-5 mr-3 text-brand-gold" />
               <span>info@telanlaw.com</span>
             </p>
+          </div>
         </div>
 
-        <div className="relative group mt-3">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-gold/15 to-brand-blue/15 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-1000"></div>
-            <div className="relative w-full h-24 bg-slate-900 rounded-xl overflow-hidden border border-white/5 shadow-md">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h4 className="text-white font-bold mb-6">Our Office</h4>
+          <div className="relative group">
+            {/* Animated Glow Border */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-brand-gold/20 to-brand-blue/20 rounded-[28px] blur opacity-0 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            
+            <div className="relative w-full h-48 bg-slate-900 rounded-[24px] overflow-hidden border border-white/10 shadow-2xl transition-transform duration-500 group-hover:-translate-y-1">
                <iframe 
                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.3503112316656!2d121.0560731!3d14.5819777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c83f8f17255d%3A0x633390089851722e!2sOne%20San%20Miguel%20Avenue%20Building!5e0!3m2!1sen!2sph!4v1715570000000!5m2!1sen!2sph"
-                 className="w-full h-full border-none grayscale-[30%] hover:grayscale-0 transition-all duration-500"
+                 className="w-full h-full border-none grayscale-[30%] hover:grayscale-0 transition-all duration-700"
                  allowFullScreen
                  loading="lazy"
                  referrerPolicy="no-referrer-when-downgrade"
                  title="Telan Solutions Office Map"
                />
-               
+                
+               {/* Subtle Glass Overlay on Edges */}
+               <div className="absolute inset-0 pointer-events-none border border-white/5 rounded-[24px]" />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       
       <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
