@@ -1649,6 +1649,7 @@ const Footer = () => (
             >
               <Mail className="w-5 h-5" />
             </a>
+            </div>
           </div>
           {/* Column 2: Quick Links */} 
           <div>
@@ -1718,6 +1719,7 @@ const Footer = () => (
                
             </div>
           </div>
+        </div>
       </div>
       
       <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
