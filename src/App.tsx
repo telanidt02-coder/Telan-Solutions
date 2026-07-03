@@ -1648,20 +1648,7 @@ const Footer = () => (
             >
               <Mail className="w-5 h-5" />
             </a>
-            </div>
           </div>
-          {/* Column 2: Quick Links */} 
-          <div>
-          <h4 className="text-white font-bold mb-6">Quick Links</h4>
-          <ul className="space-y-4">
-            <li><Link to="/" className="hover:text-brand-gold">Home</Link></li>
-            <li><Link to="/about" className="hover:text-brand-gold">About</Link></li>
-            <li><Link to="/culture" className="hover:text-brand-gold">Our Culture</Link></li>
-            <li><Link to="/technology" className="hover:text-brand-gold">Technology</Link></li>
-            <li><Link to="/jobs" className="hover:text-brand-gold">Open Jobs</Link></li>
-          </ul>
-        </div>
-
           <div className="pt-4 border-t border-slate-800/80 flex items-center space-x-3.5">
             <img 
               src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/NPC_DPO_DPS_CERT.png" 
@@ -1738,7 +1725,7 @@ const Footer = () => (
       </div>
       
       <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-        <p>© 2026 Telan Solutions. Al Rights Reserved.</p>
+        <p>© 2026 Telan Solutions. All Rights Reserved.</p>
         <p className="mt-4 md:mt-0"></p>
       </div>
     </div>
