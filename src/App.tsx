@@ -6,7 +6,6 @@ import CulturePage from './components/CulturePage';
 
 // --- Shared Components ---
 
-
 const SectionHeader = ({ title, subtitle, light = false, boldSubtitle = false }: { title: string; subtitle?: string; light?: boolean; boldSubtitle?: boolean }) => (
   <div className="mb-12 text-center">
     <motion.h2 
