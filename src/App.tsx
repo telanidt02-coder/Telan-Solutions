@@ -1714,7 +1714,7 @@ const Footer = () => (
           {/* Soft glow animation */}
           <div className="absolute -inset-1 bg-gradient-to-r from-brand-gold/10 to-brand-blue/10 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
           <img 
-            src="https://ritm.gov.ph/wp-content/uploads/2023/07/NPC-Seal-Registered.png" 
+            src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/NPC_DPO_DPS_CERT.png" 
             alt="National Privacy Commission Registered Seal" 
             className="relative h-20 md:h-24 w-auto object-contain bg-white rounded-xl p-2.5 shadow-xl shadow-black/40 border border-slate-800 transition-transform duration-300 group-hover:scale-[1.03]"
           />
