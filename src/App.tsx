@@ -1601,17 +1601,6 @@ const Footer = () => (
   <footer className="pt-20 pb-10 bg-slate-950 text-slate-300">
     <div className="container-custom">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-        <div>
-          <h4 className="text-white font-bold mb-6">Quick Links</h4>
-          <ul className="space-y-4">
-            <li><Link to="/" className="hover:text-brand-gold">Home</Link></li>
-            <li><Link to="/about" className="hover:text-brand-gold">About</Link></li>
-            <li><Link to="/culture" className="hover:text-brand-gold">Our Culture</Link></li>
-            <li><Link to="/technology" className="hover:text-brand-gold">Technology</Link></li>
-            <li><Link to="/jobs" className="hover:text-brand-gold">Open Jobs</Link></li>
-          </ul>
-        </div>
-
         <div className="space-y-6">
           <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
             <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-brand-gold/10 border border-white/10">
@@ -1660,13 +1649,40 @@ const Footer = () => (
               <Mail className="w-5 h-5" />
             </a>
           </div>
+          <div className="pt-4 border-t border-slate-800/80 flex items-center space-x-3.5">
+            <img 
+              src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/NPC_DPO_DPS_CERT.png" 
+              alt="National Privacy Commission Registered" 
+              className="h-12 w-auto object-contain bg-white rounded-lg p-1 shadow-md shadow-black/30 border border-slate-800 shrink-0"
+              onError={(e) => {
+                e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/e/ec/National_Privacy_Commission_%28NPC%29.svg";
+              }}
+            />
+            <div className="text-left">
+              <span className="block text-[10px] font-bold text-brand-gold tracking-wider uppercase">NPC Registered</span>
+              <span className="block text-[10px] text-slate-400 font-medium leading-normal mt-0.5">
+                Compliant with the Data Privacy Act of 2012.
+              </span>
+            </div>
+          </div>
+        </div>
+        
+          <div>
+          <h4 className="text-white font-bold mb-6">Quick Links</h4>
+          <ul className="space-y-4">
+            <li><Link to="/" className="hover:text-brand-gold">Home</Link></li>
+            <li><Link to="/about" className="hover:text-brand-gold">About</Link></li>
+            <li><Link to="/culture" className="hover:text-brand-gold">Our Culture</Link></li>
+            <li><Link to="/technology" className="hover:text-brand-gold">Technology</Link></li>
+            <li><Link to="/jobs" className="hover:text-brand-gold">Open Jobs</Link></li>
+          </ul>
         </div>
 
         <div>
           <h4 className="text-white font-bold mb-6">Location</h4>
           <div className="space-y-4 text-sm">
             <p className="flex items-start">
-              <MapPin className="w-5 h-5 mr-3 text-brand-gold shrink-0" />
+               <MapPin className="w-5 h-5 mr-3 text-brand-gold shrink-0" />
               <span>One San Miguel Avenue Building, Shaw Blvd Ortigas Center, Pasig, <br />NCR, Philippines</span>
             </p>
             <p className="flex items-center">
@@ -1700,38 +1716,16 @@ const Footer = () => (
                  referrerPolicy="no-referrer-when-downgrade"
                  title="Telan Solutions Office Map"
                />
-               
+                
                {/* Subtle Glass Overlay on Edges */}
                <div className="absolute inset-0 pointer-events-none border border-white/5 rounded-[24px]" />
             </div>
           </div>
         </motion.div>
       </div>
-
-      {/* Centered NPC Seal Section */}
-      <div className="border-t border-slate-900/50 pt-10 pb-8 flex flex-col items-center text-center">
-        <div className="relative group mb-4">
-          {/* Soft glow animation */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-brand-gold/10 to-brand-blue/10 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
-          <img 
-            src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/NPC_DPO_DPS_CERT.png" 
-            alt="National Privacy Commission Registered Seal" 
-            className="relative h-20 md:h-24 w-auto object-contain bg-white rounded-xl p-2.5 shadow-xl shadow-black/40 border border-slate-800 transition-transform duration-300 group-hover:scale-[1.03]"
-            onError={(e) => {
-              e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/e/ec/National_Privacy_Commission_%28NPC%29.svg";
-            }}
-          />
-        </div>
-        <div className="max-w-md px-4">
-          <span className="block text-xs font-bold text-brand-gold tracking-widest uppercase">NPC Registered Company</span>
-          <span className="block text-xs text-slate-400 font-medium leading-relaxed mt-1.5">
-            Telan Solutions is registered with the National Privacy Commission of the Philippines, fully compliant with the Data Privacy Act of 2012 (RA 10173).
-          </span>
-        </div>
-      </div>
       
       <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-        <p>© 2026 Telan Solutions. Al Rights Reserved.</p>
+        <p>© 2026 Telan Solutions. All Rights Reserved.</p>
         <p className="mt-4 md:mt-0"></p>
       </div>
     </div>
