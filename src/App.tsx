@@ -1600,7 +1600,7 @@ const CTASection = () => (
 const Footer = () => (
   <footer className="pt-20 pb-10 bg-slate-950 text-slate-300">
     <div className="container-custom">
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-8 lg:gap-6 xl:gap-8 mb-16">
         <div>
           <h4 className="text-white font-bold mb-6">Quick Links</h4>
           <ul className="space-y-4">
@@ -1662,6 +1662,25 @@ const Footer = () => (
           </div>
         </div>
 
+        <div className="space-y-6">
+          <h4 className="text-white font-bold mb-6">NPC Compliance</h4>
+          <div className="relative group inline-block">
+            {/* Soft glow animation */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-brand-gold/15 to-brand-blue/15 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
+            <img 
+              src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/NPC-LOGO.jpg" 
+              alt="National Privacy Commission Registered Seal" 
+              className="relative h-16 w-auto object-contain bg-white rounded-xl p-2 md:p-2.5 shadow-xl shadow-black/40 border border-slate-800 transition-transform duration-300 group-hover:scale-[1.03]"
+            />
+          </div>
+          <div className="space-y-1">
+            <span className="block text-xs font-bold text-brand-gold tracking-widest uppercase">Registered Company</span>
+            <p className="text-xs text-slate-400 font-medium leading-relaxed">
+              Telan Solutions is registered with the National Privacy Commission, compliant with the Data Privacy Act of 2012 (RA 10173).
+            </p>
+          </div>
+        </div>
+
         <div>
           <h4 className="text-white font-bold mb-6">Location</h4>
           <div className="space-y-4 text-sm">
@@ -1706,25 +1725,6 @@ const Footer = () => (
             </div>
           </div>
         </motion.div>
-      </div>
-
-      {/* Centered NPC Seal Section */}
-      <div className="border-t border-slate-900/50 pt-10 pb-8 flex flex-col items-center text-center">
-        <div className="relative group mb-4">
-          {/* Soft glow animation */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-brand-gold/10 to-brand-blue/10 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
-          <img 
-            src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/NPC-LOGO.jpg" 
-            alt="National Privacy Commission Registered Seal" 
-            className="relative h-28 md:h-30 w-auto object-contain bg-white rounded-xl p-2.5 shadow-xl shadow-black/40 border border-slate-800 transition-transform duration-300 group-hover:scale-[1.03]"
-          />
-        </div>
-        <div className="max-w-md px-4">
-          <span className="block text-xs font-bold text-brand-gold tracking-widest uppercase">NPC Registered Company</span>
-          <span className="block text-xs text-slate-400 font-medium leading-relaxed mt-1.5">
-            Telan Solutions is registered with the National Privacy Commission of the Philippines, fully compliant with the Data Privacy Act of 2012 (RA 10173).
-          </span>
-        </div>
       </div>
       
       <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
