@@ -1734,7 +1734,7 @@ const Footer = () => (
     </div>
   </footer>
 );
-
+ 
 const TechnologyPage = () => (
   <main className="pt-24 min-h-screen bg-white">
     {/* Page Header */}
