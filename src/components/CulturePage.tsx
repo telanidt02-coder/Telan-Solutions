@@ -18,7 +18,7 @@ interface CultureItem {
 const GALLERY_DATA: CultureItem[] = [
   {
     id: 1,
-    image: "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp18.jpg",
+    image: "./images/events/sportfest/sp18.jpg",
     images: [
       "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp19.jpg",
       "https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/events/sportfest/sp1.jpg",
