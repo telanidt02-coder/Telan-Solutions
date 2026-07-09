@@ -5,6 +5,11 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
+
+  // Automatically detect if building on GitHub Actions for GitHub Pages
+  const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
+  const base = isGithubActions ? '/Telan-Solutions/' : '/';
+
   return {
     base: '/Telan-Solutions/',
     plugins: [react(), tailwindcss()],
