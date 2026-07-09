@@ -69,7 +69,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
           <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-brand-gold/10">
             <img 
-              src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/images/logo.png" 
+              src="{`${import.meta.env.BASE_URL}images/logo.png`}
               alt="Telan Solutions Logo" 
               className="w-full h-full object-cover rounded-full transition-transform duration-500 group-hover:scale-110"
             />
@@ -210,7 +210,7 @@ const Hero = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-blue">
     <div className="absolute inset-0 z-0">
       <img 
-        src="https://raw.githubusercontent.com/telanidt02-coder/Telan-Solutions/refs/heads/main/src/images/Telan_Landing.jpg" 
+        src={`${import.meta.env.BASE_URL}images/Telan_Landing.jpg`}
         alt="Telan Solutions Office" 
         className="w-full h-full object-cover opacity-30 scale-105"
       />
